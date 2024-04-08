@@ -1,0 +1,26 @@
+---
+Questions:
+  - question: "Question1"
+    keys: ["q1", "q01"]
+    grade: 25
+    partial_questions:
+      - partial_question: "Question1.1"
+        description: "Loop Kullandımı?"
+        grade: 10
+        grade_options: [0, 5, 10]
+      - partial_question: "Question1.2"
+        description: ""
+        grade: 15
+        grade_options: [0, 5, 10, 15]
+  - question: "Question2"
+    keys: ["q2", "q02"]
+    grade: 25
+    partial_questions:
+      - partial_question: "Question2.1"
+        description: ""
+        grade: 10
+        grade_options: [0, 5, 10]
+      - partial_question: "Question2.2"
+        description: ""
+        grade: 15
+        grade_options: [0, 5, 10, 15]

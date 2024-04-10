@@ -12,8 +12,9 @@ class Student:
     submission_directory: str
     total_grade: float
     question_info: list[StudentQuestionInfo]
+    is_graded: dict[str, bool]
 
-    def __init__(self, name, surname, submission_directory, total_grade=None, question_info=None):
+    def __init__(self, name, surname, submission_directory, total_grade=None, question_info=None, is_graded=None):
         self.name = name
         self.surname = surname
         self.submission_directory = submission_directory
@@ -33,14 +34,22 @@ class Student:
         else:
             self._initialize_question_info(submission_files)
 
+        if is_graded is not None:
+            self.is_graded = is_graded
+        else:
+            self.is_graded = {q_info.question.question: False for q_info in self.question_info}
+
     def _initialize_question_info(self, submission_files):
         self.question_info = []
         for question in questions:
             respective_submission_file = next((file for file in submission_files
                                               if any(key in file for key in question.keys)), None)
 
-            with open(respective_submission_file, "r") as f:
-                code = f.read()
+            if respective_submission_file is None:
+                code = ""
+            else:
+                with open(respective_submission_file, "r") as f:
+                    code = f.read()
 
             self.question_info.append(StudentQuestionInfo(
                 question = question,
@@ -54,7 +63,8 @@ class Student:
             "surname": self.surname,
             "total_grade": self.total_grade,
             "submission_directory": self.submission_directory,
-            "question_info": [info.__dict__() for info in self.question_info]
+            "question_info": [info.__dict__() for info in self.question_info],
+            "is_graded": self.is_graded
         }
 
     def update(self):

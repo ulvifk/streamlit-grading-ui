@@ -21,6 +21,37 @@ class Student:
 
         self.total_grade = 0 if total_grade is None else total_grade
 
+        submission_files = self.initialize_submission_files()
+
+        if question_info is not None:
+            self.question_info = [StudentQuestionInfo(**info) for info in question_info]
+        else:
+            self.question_info = []
+            for question in questions:
+                self.initialize_question_info(submission_files, question)
+
+        if is_graded is not None:
+            self.is_graded = is_graded
+        else:
+            self.is_graded = {q_info.question.question: False for q_info in self.question_info}
+
+    def initialize_question_info(self, submission_files, question):
+        respective_submission_file = next((file for file in submission_files
+                                          if any(key in file.lower() for key in question.keys)), None)
+
+        if respective_submission_file is None:
+            code = ""
+        else:
+            with open(respective_submission_file, "r") as f:
+                code = f.read()
+
+        self.question_info.append(StudentQuestionInfo(
+            question = question,
+            code=code,
+            grade=0
+        ))
+
+    def initialize_submission_files(self):
         submission_files = []
         for root, dirs, files in os.walk(self.submission_directory):
             for file in files:
@@ -29,33 +60,7 @@ class Student:
                 if file.endswith(".py"):
                     submission_files.append(os.path.join(root, file))
 
-        if question_info is not None:
-            self.question_info = [StudentQuestionInfo(**info) for info in question_info]
-        else:
-            self._initialize_question_info(submission_files)
-
-        if is_graded is not None:
-            self.is_graded = is_graded
-        else:
-            self.is_graded = {q_info.question.question: False for q_info in self.question_info}
-
-    def _initialize_question_info(self, submission_files):
-        self.question_info = []
-        for question in questions:
-            respective_submission_file = next((file for file in submission_files
-                                              if any(key in file for key in question.keys)), None)
-
-            if respective_submission_file is None:
-                code = ""
-            else:
-                with open(respective_submission_file, "r") as f:
-                    code = f.read()
-
-            self.question_info.append(StudentQuestionInfo(
-                question = question,
-                code=code,
-                grade=0
-            ))
+        return submission_files
 
     def __dict__(self):
         return {
@@ -71,3 +76,9 @@ class Student:
         for question_info in self.question_info:
             question_info.update()
         self.total_grade = sum([question_info.grade for question_info in self.question_info])
+
+    def get_question_info(self, question_name):
+        return next((info for info in self.question_info if info.question.question == question_name), None)
+
+    def __hash__(self):
+        return hash(self.name + self.surname)

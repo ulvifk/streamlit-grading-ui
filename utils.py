@@ -3,8 +3,15 @@ import os
 import zipfile
 import json
 
+from openpyxl.utils.dataframe import dataframe_to_rows
+from openpyxl.workbook import Workbook
+from openpyxl.worksheet.table import Table, TableStyleInfo
+
 from src.question import Question
 from src.student import Student
+import pandas as pd
+from src.settings_loader import questions
+from src.student_question_info import StudentQuestionInfo
 
 
 def timeout_handler(signum, frame):
@@ -46,6 +53,59 @@ def load_students(file_path=None, json_string=None):
         students = json.loads(json_string)
         return [Student(**student) for student in students]
 
+def save_to_excel(q_name):
+    students = load_students("students.json")
+
+    question = next((question for question in questions if question.question == q_name), None)
+    columns = ["Name", "Surname"] + [partial_q.partial_question for partial_q in question.partial_questions] + ["Total Grade"]
+    df = pd.DataFrame(columns=columns)
+    for student in students:
+        student_q_info = next((q_info for q_info in student.question_info if q_info.question.question == q_name), None)
+        row = [student.name, student.surname]
+        for p_q_info in student_q_info.partial_question_info:
+            row.append(p_q_info.grade)
+        row.append(student_q_info.grade)
+
+        df.loc[len(df)] = row
+
+    wb = Workbook()
+    ws = wb.active
+
+    # Add DataFrame rows to Excel worksheet
+    for r in dataframe_to_rows(df, index=False, header=True):
+        ws.append(r)
+
+    # Define a table style
+    tab = Table(displayName="Table1", ref=f"A1:{chr(65 + len(df.columns) - 1)}{len(df) + 1}")
+
+
+
+    # Add the table to the worksheet
+    ws.add_table(tab)
+
+    # Save the workbook
+    wb.save(q_name + ".xlsx")
+
+def re_init_question(student: Student, question: Question):
+    q_info = next((q_info for q_info in student.question_info if q_info.question.question == question.question), None)
+
+    submission_files = student.initialize_submission_files()
+    if q_info is not None:
+        student.question_info.remove(q_info)
+
+    student.initialize_question_info(submission_files, question)
+    student.update()
+
+
+
+
+
+
+def re_init_question_of_all_students(students, question: Question):
+    for student in students:
+        re_init_question(student, question)
+
+
 
 def save_students(students):
     with open("students.json", "w") as f:
@@ -66,22 +126,5 @@ def unzip_all_in_directory(directory):
 
 
 if __name__ == "__main__":
-    #unzip_all_in_directory("./submissions")
     students = load_students()
-    save_students(students)
-
-    student = students[2]
-    question_info_3 = student.question_info[0]
-    print(f"{question_info_3.code}")
-    exec("""
-matrix = [[1, 2, 3], [4, 5, 6]]
-transpose = None
-
-row = len(matrix)
-column = len(matrix[0])
-transpose = [[matrix[j][i] for j in range(row)] for i in range(column)]
-print(transpose)
-""", locals())
-
-
-[[5, 6, 7], [10, 12 ,14]]
+    x=0

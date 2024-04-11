@@ -2,7 +2,7 @@
   {
     "name": "Abdelhafiz",
     "surname": "Mohammed",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Abdelhafiz Mohammed_254091_assignsubmission_file",
     "question_info": [
       {
@@ -157,7 +157,7 @@
           ]
         },
         "code": "#q04\n\n\ndef get_user_choices():\n    choices = []\n    submitted_numerals = set()\n    while len(choices) < 4:\n        choice = input(f\"Enter choice {len(choices) + 1}: \")\n        try:\n            numeral = int(choice)\n            if numeral < 0 or numeral > 9:\n                print(\"Please choose a numeral from 0 to 9.\")\n            elif numeral in submitted_numerals:\n                print(\"Please choose a different numeral at each time.\")\n            else:\n                choices.append(numeral)\n                submitted_numerals.add(numeral)\n        except ValueError:\n            print(\"Please enter a valid integer.\")\n    return choices\nuser_choices = get_user_choices()\nprint(f\"Your choices are {user_choices}.\")\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -193,14 +193,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -227,7 +227,7 @@
   {
     "name": "Akif",
     "surname": "Ahat",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Akif Ahat_254097_assignsubmission_file",
     "question_info": [
       {
@@ -382,7 +382,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nanswers = []\n\ndef choice():\n        x = int(input(f\"Enter choice {i+1}: \"))\n        if x > 9:\n            print(\"Please choose a numeral from 0 to 9.\\n\")\n            choice()\n        elif x < 0:\n            print(\"Please choose a numeral from 0 to 9.\\n\")\n            choice()\n        elif x in answers:\n            print(\"Please choose a different numeral at each time.\\n\")\n            choice() \n        else:\n            answers.append(x)\n\nfor i in range(4):\n    choice()\n   \nprint(\"Your choices are\", answers)",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -418,14 +418,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -452,7 +452,7 @@
   {
     "name": "Aleyna",
     "surname": "Bariskaner",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Aleyna Bariskaner_254118_assignsubmission_file",
     "question_info": [
       {
@@ -607,7 +607,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\n\n\n\n\nnumbers = []\nwhile len(numbers) < 4:\n    inp = int(input(\"Enter choice \" + str(len(numbers)+1) + \":\"))\n    if inp in numbers:\n        print(\"Please choose a different numeral at each time.\")\n    elif inp < 0 or inp > 10:\n        print(\"Please choose a numeral from 0 to 9.\")\n    else:\n        numbers.append(inp)\nprint(\"Your choices are \" + str(numbers) + \".\")\n\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -643,14 +643,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -677,7 +677,7 @@
   {
     "name": "Aleyna",
     "surname": "Yucelman",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Aleyna Yucelman_254095_assignsubmission_file",
     "question_info": [
       {
@@ -832,7 +832,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoices = []\nwhile len(choices) < 4:\n    choice = int(input(f\"please enter your choice {len(choices)+1}: \"))\n    try:\n        if choice < 0 or choice > 9:\n            print(f\"please choose a number from 0 to 9\")\n        elif choice in choices:\n            print(f\"this number in also in choices, choose another\")\n        else:\n            choices.append(choice)\n    except ValueError:\n        print(\"invalid output. Please enter a numeral\")\n    \nprint(f\"your choices are {choices}\")",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -868,14 +868,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -902,7 +902,7 @@
   {
     "name": "Arda",
     "surname": "Gumus",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Arda Gumus_254113_assignsubmission_file",
     "question_info": [
       {
@@ -1057,7 +1057,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nmylist = []\nk=1\nwhile k < 5:\n    x = int(input(f\"Enter choice {k}:\"))\n    if x in mylist:\n        print(\"Please choose a different numeral at each time\")\n    elif x >= 0 and x < 10:\n        mylist.append(x)\n        k += 1 \n    else:\n        print(\"Please choose a numeral from 0 to 9\")\nprint(mylist)",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -1093,14 +1093,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -1127,7 +1127,7 @@
   {
     "name": "Arda",
     "surname": "Mutlu",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Arda Mutlu_254073_assignsubmission_file",
     "question_info": [
       {
@@ -1282,7 +1282,7 @@
           ]
         },
         "code": "# -*- coding: utf-8 -*-\n\"\"\"\nCreated on Tue Mar 26 23:57:55 2024\n\n@author: Lenovo\n\"\"\"\nsecilenler=[]\ncount=1\nwhile count<=4:\n    sayi=int(input(f\"Enter choice {count}:\"))\n    if (sayi<=9) and (sayi>=0):\n        if sayi in secilenler:\n            print(\"Please choose a different numeral at each time.\")\n        else:\n            secilenler.append(sayi)\n            count+=1\n    else:\n        print(\"Please choose a numeral from 0 to 9\")\nprint(f\"Your choices are{secilenler}\")\n\n    \n    ",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -1318,14 +1318,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -1352,7 +1352,7 @@
   {
     "name": "Arda",
     "surname": "Tasbas",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Arda Tasbas_254119_assignsubmission_file",
     "question_info": [
       {
@@ -1507,7 +1507,7 @@
           ]
         },
         "code": "number_of_choice = 1\nchoices = []\n\nwhile (number_of_choice <= 4):\n    guess = int(input(f\"Enter choice {number_of_choice}: \"))\n    if (guess<0 or guess>9):\n        print(\"Please choose a numeral from 0 to 9.\")\n    elif (guess in choices):\n        print(\"Please choose a different numeral at each time.\")\n    else:\n        number_of_choice += 1\n        choices.append(guess)\n\nprint(f\"Your choices are {choices}\")\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -1543,14 +1543,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -1577,7 +1577,7 @@
   {
     "name": "Asu",
     "surname": "Tuluk",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Asu Tuluk_254142_assignsubmission_file",
     "question_info": [
       {
@@ -1732,7 +1732,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\na=[]\ni=1\nwhile (i<=4):\n    x=str(input(f\"Enter choice {i}: \"))\n    x=int(x)\n    if x not in range(0,10):\n        print(\"Please choose a numeral from 0 to 9\")\n    elif (x in a):\n        print(\"Please choose a different numeral at each time\")\n    else:\n        a.append(x)\n        i+=1\nprint(f\"Your choices are {a}\")",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -1768,14 +1768,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -1802,7 +1802,7 @@
   {
     "name": "Ata",
     "surname": "Gorgul",
-    "total_grade": 42,
+    "total_grade": 41,
     "submission_directory": "submissions\\Ata Gorgul_254152_assignsubmission_file",
     "question_info": [
       {
@@ -1957,7 +1957,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\n\nchoice_list = []\ni = 1\n\nwhile i < 5:\n    choice = int(input(f\"Enter choice {i}:\"))\n    if choice > 9 or choice < 0:\n        print( \"Please choose a numeral from 0 to 9.\")\n        choice = int(input( f\"Enter choice {i}: \"))\n    if choice <= 9 and choice >= 0:\n        choice_list.append(choice)\n        i += 1\n    \nprint(f\"Your choices are {choice_list}\")\n\n\n\n\n\n",
-        "grade": 17,
+        "grade": 16,
         "partial_question_info": [
           {
             "partial_question": {
@@ -1993,14 +1993,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -2027,7 +2027,7 @@
   {
     "name": "Ayca",
     "surname": "Ege",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Ayca Ege_254101_assignsubmission_file",
     "question_info": [
       {
@@ -2182,7 +2182,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# Your script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoices=[]\ni=len(choices)\nwhile i < 4:\n    choice=input(\"enter choice \"+ str(i+1)+ \":\")\n\n    if 0<=int(choice)<=9:\n        if choice not in choices:\n            choices.append(choice)\n            i += 1\n        else:\n            print(\"Please choose a different numeral each time.\")\n    else:\n        print(\"Please choose a numeral from 0 to 9.\")\n\nprint(f\"Your choices are {choices}\")\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -2218,14 +2218,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -2252,7 +2252,7 @@
   {
     "name": "Barkin",
     "surname": "Guven",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Barkin Guven_254055_assignsubmission_file",
     "question_info": [
       {
@@ -2407,7 +2407,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of \"range\"\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n########################################################################\n\n\nall_choices=[]\nprint('Pls enter 4 numbers betwwen 0-9 include both')\nwhile len(all_choices) <4:\n    try:\n        number= int(input(f\"Enter choice {len(all_choices) + 1}: \"))\n        if 0 <= number <= 9:\n           if number not in all_choices:\n              all_choices.append(number)\n           else:\n               print(\"Please dont write the same number.\")\n        else:\n            print(\"Please choose a number between 0 and 9.\")\n    except:\n         print(\"Please provide an integer.\")\n\nprint(f\"Your choices are: {all_choices}\")\n    ",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -2443,14 +2443,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -2477,7 +2477,7 @@
   {
     "name": "Batuhan",
     "surname": "Ozcan",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Batuhan Ozcan_254107_assignsubmission_file",
     "question_info": [
       {
@@ -2632,7 +2632,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nmy_choices = []\n\nwhile len(my_choices) < 4:\n    choice = int(input(f\"Enter choice {len(my_choices) + 1}: \"))\n    \n    if choice < 0 or choice > 9:\n        print(\"Please choose a numeral from 0 to 9.\")\n    elif choice in my_choices:\n        print(\"Please choose a different numeral at each time.\")\n    else:\n        my_choices.append(choice)\n\nprint(\"Your choices are\")\nprint(my_choices)",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -2668,14 +2668,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -2702,7 +2702,7 @@
   {
     "name": "Batuhan",
     "surname": "Uz",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Batuhan Uz_254100_assignsubmission_file",
     "question_info": [
       {
@@ -2857,7 +2857,7 @@
           ]
         },
         "code": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\nCreated on Mon Feb 26 13:16:32 2024\n\n@author: batuhan\n\"\"\"\n\nchoice_num = 1\nchoices = []\n\nwhile (choice_num <= 4):\n    guess = int(input(f\"Enter choice {choice_num}: \"))\n    if (guess<0 or guess>9):\n        print(\"Please choose a numeral from 0 to 9.\")\n    elif (guess in choices):\n        print(\"Please choose a different numeral at each time.\")\n    else:\n        choice_num += 1\n        choices.append(guess)\n\nprint(f\"Your choices are {choices}.1\")",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -2893,14 +2893,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -2927,7 +2927,7 @@
   {
     "name": "Berat",
     "surname": "Oner",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Berat Oner_254125_assignsubmission_file",
     "question_info": [
       {
@@ -3082,7 +3082,7 @@
           ]
         },
         "code": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\nCreated on Sat Mar 23 14:40:23 2024\n\n@author: beratoner\n\"\"\"\n\nchoices_list = []\ni = 1\n\nwhile len(choices_list) < 4:\n    choice = int(input(f\"Enter choice {i}: \"))\n    if choice >= 0 and choice <= 9:\n        if choice not in choices_list:\n            choices_list.append(choice)\n            i += 1\n        else:\n            print(\"Please choose a different numeral at each time. \")\n    else:\n        print(\"Please choose a numeral from 0 to 9\")\n        \nprint(choices_list)",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -3118,14 +3118,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -3152,7 +3152,7 @@
   {
     "name": "Beren",
     "surname": "Bariskan",
-    "total_grade": 25,
+    "total_grade": 24,
     "submission_directory": "submissions\\Beren Bariskan_254067_assignsubmission_file",
     "question_info": [
       {
@@ -3307,7 +3307,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\nmylist=list()\nt=0\nwhile t<4:\n    x=int(input(\"Please enter a number from 0 to 9, both inclusive: \"))\n    if x<0 or x>9:\n        print(\"Please enter a number in the given interval: \")\n    elif x in mylist:\n        print(\"Please enter a different number: \")\n    else:\n        mylist.append(x)\n        t+=1\nprint(mylist)",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -3343,14 +3343,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -3377,7 +3377,7 @@
   {
     "name": "Beril",
     "surname": "Ozbek",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Beril Ozbek_254141_assignsubmission_file",
     "question_info": [
       {
@@ -3532,7 +3532,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoiceslist = []\na = 0\nwhile a < 4 :\n    choices_inlist = int(input(f\"Enter choice {a + 1}: \"))\n    if choices_inlist < 0 or choices_inlist > 9 :\n        print(\"Please choose a numeral from 0 to 9.\")\n    elif choices_inlist in choiceslist :\n        print(\"Please choose a different numeral at each time.\")\n    else:\n        choiceslist.append(choices_inlist)\n        a += 1\nprint(f\"Your choices are {choiceslist}.\") \n         \n        ",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -3568,14 +3568,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -3602,7 +3602,7 @@
   {
     "name": "Berk",
     "surname": "Ozturk",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Berk Ozturk_254050_assignsubmission_file",
     "question_info": [
       {
@@ -3757,7 +3757,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\nchoice=1\ncount=0\nanswerlist=[]\nwhile count<4:\n    x=int(input(f\"Enter a choice {choice}: \"))\n    \n    if x<0 or x>9:\n        print(\"Please choose a numeral from 0 to 9.\")\n        print()\n    \n    elif x in answerlist:\n        print(\"Please choose a different numeral at each time.\")\n        print()\n        \n    else:\n        choice+=1\n        count+=1\n        answerlist.append(x)\n        print()\n        \nprint(f\"Your choices are {answerlist}.\" )\n\n        \n     ",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -3793,14 +3793,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -3827,7 +3827,7 @@
   {
     "name": "Berkay",
     "surname": "Akpinar",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Berkay Akpinar_254058_assignsubmission_file",
     "question_info": [
       {
@@ -3982,7 +3982,7 @@
           ]
         },
         "code": "# -*- coding: utf-8 -*-\n\"\"\"\nCreated on Sun Mar 31 16:08:47 2024\n\n@author: emreb\n\"\"\"\n\nchosen_numbers = []\n\nwhile len(chosen_numbers) < 4:\n    user_input = input(f\"Enter choice {len(chosen_numbers) + 1}: \")\n    try:\n        choice = int(user_input)\n        if choice < 0 or choice > 9:\n            print(\"Please choose a numeral from 0 to 9.\")\n        elif choice in chosen_numbers:\n            print(\"Please choose a different numeral at each time.\")\n        else:\n            chosen_numbers.append(choice)\n    except ValueError:\n        print(\"Please enter a valid integer.\")\n\nprint(f\"Your choices are {chosen_numbers}.\")\n\n\n\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -4018,14 +4018,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -4052,7 +4052,7 @@
   {
     "name": "Bilgehan",
     "surname": "Durukan",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Bilgehan Durukan_254076_assignsubmission_file",
     "question_info": [
       {
@@ -4207,7 +4207,7 @@
           ]
         },
         "code": "\n\nchoices = []\nwhile len(choices) < 4:\n    try:\n        # Ask for input\n        user_input = int(input(f\"Enter choice {len(choices)+1}: \"))\n        \n        # Check if the input is within the desired range and not already chosen\n        if 0 <= user_input <= 9:\n            if user_input not in choices:\n                choices.append(user_input)\n            else:\n                print(\"Please choose a different numeral at each time.\")\n        else:\n            print(\"Please choose a numeral from 0 to 9.\")\n    except ValueError:\n        print(\"Please enter an integer.\")\n\nprint(f\"Your choices are {choices}.\")\n\n\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -4243,14 +4243,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -4277,7 +4277,7 @@
   {
     "name": "Bora",
     "surname": "Garip",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Bora Garip_254109_assignsubmission_file",
     "question_info": [
       {
@@ -4432,7 +4432,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\ndef get_unique_numerals():\n    choices = []\n    while len(choices) < 4:\n        choice = input(\"Enter choice {}: \".format(len(choices) + 1))\n        if not choice.isdigit():\n            print(\"Please enter a numeral.\")\n            continue\n        choice = int(choice)\n        if choice < 0 or choice > 9:\n            print(\"Please choose a numeral from 0 to 9.\")\n            continue\n        if choice in choices:\n            print(\"Please choose a different numeral at each time.\")\n            continue\n        choices.append(choice)\n    return choices\n\nuser_choices = get_unique_numerals()\nprint(\"Your choices are {}.\".format(user_choices))",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -4468,14 +4468,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -4502,7 +4502,7 @@
   {
     "name": "Can",
     "surname": "Aras",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Can Aras_254079_assignsubmission_file",
     "question_info": [
       {
@@ -4657,7 +4657,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoice_list = []\ni = 1\n\nchoice = int(input(f\"Enter choice {i}:\"))\nwhile i < 5:\n    if choice in choice_list:\n        print(\"You must enter different numerals\")\n        choice = int(input(f\"Enter choice {i}: \"))\n    elif choice > 9 or choice < 0:\n        print( \"Please choose a numeral from 0 to 9.\")\n        choice = int(input( f\"Enter choice {i}: \"))\n    else :\n        choice_list.append(choice)\n        i += 1\n        if i < 5:\n            choice = int(input(f\"Enter choice {i}:\"))\n    \n    \nprint(f\"Your choices are {choice_list}\")\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -4693,14 +4693,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -4727,7 +4727,7 @@
   {
     "name": "Can",
     "surname": "Sevgin",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Can Sevgin_254045_assignsubmission_file",
     "question_info": [
       {
@@ -4882,7 +4882,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nlot_numbers =[]\ni=1\nwhile len(lot_numbers)<4:\n    try:\n        number = int(input((f\"Provide number {i} for lottery between 0 and 9:\\t\")))\n        if number>=0 and number<=9:\n            if number not in lot_numbers:\n                lot_numbers.append(number)\n                i+=1\n                print(f\"You have entered number {number}\")\n            else:\n                print(f\"You have entered same number {number} you have entered before, try another number...\")\n        else:\n            print(\"You should enter a number between 0 and 9...\")\n    except ValueError:\n        print(\"Strings can not be converted into integers write a number...\")\nprint(f\"Your lottery selection is: {lot_numbers}\")       ",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -4918,14 +4918,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -4952,7 +4952,7 @@
   {
     "name": "Cem",
     "surname": "Ardali",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Cem Ardali_254078_assignsubmission_file",
     "question_info": [
       {
@@ -5107,7 +5107,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\n\nchoices = []\nchoice_number = 1\n\nwhile len(choices) < 4:\n    try:\n        \n        choice_input = input(f\"Enter choice {choice_number}: \")\n        choice = int(choice_input)\n\n        if 0 <= choice <= 9:\n\n            if choice not in choices:\n                choices.append(choice)\n                choice_number += 1\n            else:\n                print(\"Please choose a different numeral at each time.\")\n        else:\n            print(\"Please choose a numeral from 0 to 9.\")\n    \n    except ValueError:\n       \n        print(\"That's not an integer. Please enter an integer.\")\n\n\nprint(f\"Your choices are {choices}.\")\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -5143,14 +5143,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -5177,7 +5177,7 @@
   {
     "name": "Cem",
     "surname": "Atasoy",
-    "total_grade": 46,
+    "total_grade": 45,
     "submission_directory": "submissions\\Cem Atasoy_254061_assignsubmission_file",
     "question_info": [
       {
@@ -5332,7 +5332,7 @@
           ]
         },
         "code": "\"\"\"\nsoru4\n\"\"\"\n\nwish_me_luck = []\nlucky_number = 1\n\nwhile len(wish_me_luck) < 4:\n    try:\n        \n        luckiness = input(f\"Enter choice {lucky_number}: \")\n        choice = int(luckiness)\n\n        if 0 <= choice <= 9:\n\n            if choice not in wish_me_luck:\n                wish_me_luck.append(wish_me_luck)\n                lucky_number += 1\n            else:\n                print(\"Give a try for different numeral at each time.\")\n        else:\n            print(\"Give a try. A numeral from 0 to 9.\")\n    \n    except ValueError:\n       \n        print(\"That's not an integer. Enter an integer.\")\n\n\nprint(f\"Your choices are {wish_me_luck}.\")",
-        "grade": 21,
+        "grade": 20,
         "partial_question_info": [
           {
             "partial_question": {
@@ -5368,14 +5368,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -5402,7 +5402,7 @@
   {
     "name": "Ceren",
     "surname": "Celik",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Ceren Celik_254137_assignsubmission_file",
     "question_info": [
       {
@@ -5557,7 +5557,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\nyour_choices = []\ndef four_numbers():\n    choices = []\n\n    for i in range(1, 5):\n        while True:\n            try:\n                number = int(input(f\"Enter choice {i}: \"))\n                if 0 <= number <= 9 and number not in your_choices:\n                    your_choices.append(number)\n                    break\n                elif number in your_choices:\n                    print('Please choose a different numeral at each time.')\n                else:\n                    print('Please choose a number between 0 and 9.')\n                    \n            except ValueError:\n                print('Invalid input. Please enter an integer.')\n\n    print(\"Your choices are\", your_choices)\n\nfour_numbers()\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -5593,14 +5593,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -5627,7 +5627,7 @@
   {
     "name": "Ceren",
     "surname": "Ozcan",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Ceren Ozcan_254062_assignsubmission_file",
     "question_info": [
       {
@@ -5782,7 +5782,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nmy_choices = []\n\nwhile len(my_choices) < 4:\n    my_choice = input(\"Choose your number from 0 to 9: \")\n\n    if my_choice.isdigit():\n        num = int(my_choice)\n        if 0 <= num <= 9 and num not in my_choices:\n            my_choices.append(num)\n        elif num in my_choices:\n            print(\"Choose another number.\")\n        else:\n            print(\"Number should be from 0 to 9.\")\n    else:\n        print(\"Enter a valid number.\")\n\nprint(\"My choices are:\", my_choices)\n\n\n\n\n\n\n\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -5818,14 +5818,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -5852,7 +5852,7 @@
   {
     "name": "Ceren",
     "surname": "Ozova",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Ceren Ozova_254115_assignsubmission_file",
     "question_info": [
       {
@@ -6007,7 +6007,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\ndef get_valid_input(choices):\n    while True:\n        choice = input(f\"Enter choice {len(choices) + 1}: \")\n        try:\n            choice = int(choice)\n            if choice < 0 or choice > 9:\n                print(\"Please choose a numeral from 0 to 9.\")\n            elif choice in choices:\n                print(\"Please choose a different numeral at each time.\")\n            else:\n                choices.append(choice)\n                return choices\n        except ValueError:\n            print(\"Please enter a valid integer.\")\n\n\ndef main():\n    choices = []\n    while len(choices) < 4:\n        choices = get_valid_input(choices)\n\n    print(f\"Your choices are {choices}\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -6043,14 +6043,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -6077,7 +6077,7 @@
   {
     "name": "Ceylin",
     "surname": "Cagatay",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Ceylin Cagatay_254074_assignsubmission_file",
     "question_info": [
       {
@@ -6232,7 +6232,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoices = []\n\nwhile len(choices) < 4:\n    choice = input(\"Enter choice {}: \".format(len(choices) + 1))\n    \n    try:\n        num = int(choice)\n        if num < 0 or num > 9:\n            print(\"Please choose a numeral from 0 to 9.\")\n        elif num in choices:\n            print(\"Please choose a different numeral at each time.\")\n        else:\n            choices.append(num)\n    except ValueError:\n        print(\"Invalid input. Please enter a numeral.\")\n\nprint(\"Your choices are {}.\".format(choices))",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -6268,14 +6268,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -6302,7 +6302,7 @@
   {
     "name": "Dilara",
     "surname": "Ozaltin",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Dilara Ozaltin_254090_assignsubmission_file",
     "question_info": [
       {
@@ -6457,7 +6457,7 @@
           ]
         },
         "code": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\nCreated on Sun Mar 31 17:22:45 2024\n\n@author: dilaraozaltin\n\"\"\"\n\na=[]\ni=1\nwhile (i<=4):\n    x=str(input(f\"Enter choice {i}: \"))\n    x=int(x)\n    if x not in range(0,10):\n        print(\"Please choose a numeral from 0 to 9\")\n    elif (x in a):\n        print(\"Please choose a different numeral at each time\")\n    else:\n        a.append(x)\n        i+=1\nprint(f\"Your choices are {a}\")",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -6493,14 +6493,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -6527,7 +6527,7 @@
   {
     "name": "Dilay",
     "surname": "Demir",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Dilay Demir_254131_assignsubmission_file",
     "question_info": [
       {
@@ -6682,7 +6682,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\nchoices = []\nprint(\"Please enter 4 different numbers from 0 to 9.\")\n    \nwhile len(choices) < 4:\n    try:\n       number= int(input(f\"Enter choice {len(choices) + 1}: \"))\n       if 0 <= number <= 9:\n          if number not in choices:\n             choices.append(number)\n          else:\n              print(\"Please choose a different numeral at each time.\")\n       else:\n           print(\"Please choose a numeral from 0 to 9.\")\n    except:\n        print(\"Please provide an integer.\")\n\nprint(f\"Your choices are: {choices}\")",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -6718,14 +6718,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -6752,7 +6752,7 @@
   {
     "name": "Dilay",
     "surname": "Tornaci",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Dilay Tornaci_254080_assignsubmission_file",
     "question_info": [
       {
@@ -6907,7 +6907,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\n\nchoices = []\ni=1\n\nwhile i<5:\n    x = int(input(f\"Enter choice {i}: \"))\n    if x<0 or x>9:\n        print(\"Please choose a numeral from 0 to 9.\")\n    elif x in choices:\n        print(\"Please choose a different numeral at each time.\")\n    else:\n        choices.append(x)\n        i+=1\nprint(f\"Your choices are: {choices}\")\n    \n        \n    ",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -6943,14 +6943,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -6977,7 +6977,7 @@
   {
     "name": "Doga",
     "surname": "Bender",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Doga Bender_254056_assignsubmission_file",
     "question_info": [
       {
@@ -7132,7 +7132,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoices = []\n\nfor i in range(1, 5):\n    while True:\n        a = int(input(f\"Enter choice {i}: \"))\n        if a >= 0 and a <= 9 :\n            if a not in choices:\n                choices.append(a)\n                break\n            else: \n                print(\"Please choose a different numeral at each time. \")\n        else: \n            print(\"Please choose a numeral from 0 to 9. \")\n\nprint(f\"Your choices are {choices}.\")",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -7168,14 +7168,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -7202,7 +7202,7 @@
   {
     "name": "Doruk",
     "surname": "Esen",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Doruk Esen_254136_assignsubmission_file",
     "question_info": [
       {
@@ -7357,7 +7357,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\ncount = 0\ninp = int(input(f\"Enter choice {count+1}: \"))\nnumber_list = []\nwhile count < 4:\n    if (inp <0 or inp >9):\n        print (\"Please choose a numeral from 0 to 9.\")\n        inp = int(input(f\"Enter choice {count+1}: \"))\n    elif inp in number_list:\n        print (\"Please choose a different numeral at each time.\")\n        inp = int(input(f\"Enter choice {count+1}: \"))\n    else:\n        number_list.append(inp)\n        count+=1\n        if count < 4:\n            inp = int(input(f\"Enter choice {count+1}: \"))\nprint(\"Your choices are\",number_list)",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -7393,14 +7393,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -7427,7 +7427,7 @@
   {
     "name": "Doruk",
     "surname": "Uysal",
-    "total_grade": 41,
+    "total_grade": 35,
     "submission_directory": "submissions\\Doruk Uysal_254047_assignsubmission_file",
     "question_info": [
       {
@@ -7582,7 +7582,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nx_1 = int(input(\"Enter choice 1: \"))\nalist = []\n\n\nwhile (0> x_1) or (x_1> 9) :\n    print(\"Please choose a numeral from 0 to 9.\")\n    x_1 = int(input(\"Enter choice 1: \"))\nalist.append(x_1)    \n  \n\n  \nx_2 = int(input(\"Enter choice 2: \"))\nwhile x_2 in alist:\n    print(\"Please choose a different numearal at each time.\")\n    x_2 = int(input(\"Enter choice 2: \"))\nwhile (0> x_2) or (x_2> 9) :\n    print(\"Please choose a numeral from 0 to 9.\")\n    x_2 = int(input(\"Enter choice 2: \"))\nalist.append(x_2)    \n\n\nx_3 = int(input(\"Enter a choice 3:\"))\nwhile x_3 in alist:\n    print(\"Please choose a different numeral at each time. \")\n    x_3 = int(input(\"Enter choice 3: \"))\nwhile (0 > x_3) or (x_3 > 9):\n    print(\"Please choose a numeral from 0 to 9.\")\n    x_3 = int(input(\"Enter choice 3: \"))\nalist.append(x_3)\n\nx_4 = int(input(\"Enter a choice 4:\"))\nwhile x_4 in alist:\n    print(\"Please choose a different numeral at each time. \")\n    x_4 = int(input(\"Enter choice 4: \"))\nwhile (0 > x_4) or (x_4 > 9):\n    print(\"Please choose a numeral from 0 to 9.\")\n    x_4 = int(input(\"Enter choice 4: \"))\nalist.append(x_4)\n\n\nprint(alist)",
-        "grade": 16,
+        "grade": 10,
         "partial_question_info": [
           {
             "partial_question": {
@@ -7612,17 +7612,17 @@
                 8
               ]
             },
-            "grade": 4
+            "grade": 2
           },
           {
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
             "grade": 0
@@ -7638,7 +7638,7 @@
                 4
               ]
             },
-            "grade": 4
+            "grade": 0
           }
         ],
         "note": ""
@@ -7652,7 +7652,7 @@
   {
     "name": "Duru",
     "surname": "Guney",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Duru Guney_254087_assignsubmission_file",
     "question_info": [
       {
@@ -7807,7 +7807,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nend_user=[]\ni=1\nwhile True:\n    if len(end_user)==4:\n        break\n    num=int(input(f'enter a number {i}:'))\n    if num<0:\n        print('you have entered a non-positive integer.')\n    elif num>9:\n        print('you have entered a number bigger than 9.')\n    elif num in end_user:\n        print('you have entered an already chosen number')\n    else:\n        i+=1\n        end_user.append(num)\n        \nprint(end_user)",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -7843,14 +7843,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -7877,7 +7877,7 @@
   {
     "name": "Duru",
     "surname": "Nacak",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Duru Nacak_254104_assignsubmission_file",
     "question_info": [
       {
@@ -8032,7 +8032,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoices, i = [], 1\nwhile i<=4:\n    choice = int(input(f\"Enter Choice {i}:\"))\n    if choice not in range(10):\n        print(\"Please choose a numeral from 0 to 9.\")\n    elif choice in choices:\n        print(\"Please choose a different numeral at each time.\")\n    else:\n        choices.append(choice)\n        i+=1\n\nprint(f\"Your choices are {choices}.\")\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -8068,14 +8068,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -8102,7 +8102,7 @@
   {
     "name": "Ece",
     "surname": "Yoruk",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Ece Yoruk_254144_assignsubmission_file",
     "question_info": [
       {
@@ -8257,7 +8257,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\ni=0\nnum_list=[]\n\nwhile i<4:\n    i+=1\n    participant_choice_i=int(input(f\"Enter choice {i}.\\n\"))\n    \n    \n       \n    if participant_choice_i<0:\n        i-=1\n        print(\"Please enter a positive integer.\\n\")\n    elif participant_choice_i>9:\n        i-=1\n        print(\"Please choose a numeral from 0 to 9.\\n\")\n    elif participant_choice_i not in num_list:\n        num_list.append(participant_choice_i)\n    else:\n        i-=1\n        print(f\"Please choose a different numeral at each time.\")\n        \n\n\nprint(f\"Your choice are {num_list}\") ",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -8293,14 +8293,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -8327,7 +8327,7 @@
   {
     "name": "Eda",
     "surname": "Yilmaz",
-    "total_grade": 48,
+    "total_grade": 47,
     "submission_directory": "submissions\\Eda Yilmaz_254084_assignsubmission_file",
     "question_info": [
       {
@@ -8482,7 +8482,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n###########################################################################\n\nchoices_list = []\na = 0\n\nwhile a < 4:\n    choicesin_list = int(input(f\"Enter choice {a + 1}: \"))\n    if choicesin_list < 0 or choicesin_list > 9:\n        print(\"Please choose a numeral from 0 to 9.\")\n    elif choicesin_list in choices_list:\n        print(\"Please choose a different numeral each time.\")\n    else:\n        choices_list.append(choicesin_list)\n        a += 1\n\nprint(\"Choices selected:\", choices_list)\n",
-        "grade": 23,
+        "grade": 22,
         "partial_question_info": [
           {
             "partial_question": {
@@ -8518,14 +8518,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -8552,7 +8552,7 @@
   {
     "name": "Ediz",
     "surname": "Yalcin",
-    "total_grade": 46,
+    "total_grade": 45,
     "submission_directory": "submissions\\Ediz Yalcin_254102_assignsubmission_file",
     "question_info": [
       {
@@ -8707,7 +8707,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoicelist = []\nfor i in range(5):\n    while len(choicelist) < i:\n        choice = int(input(f\"Enter Choice {i}: \"))\n        if choice >= 9 or choice <= 0 or choice in choicelist:\n            print(\"Please enter an appropriate number\")\n            choice\n        else:\n            choicelist.append(choice)\n        \n\n\nprint(choicelist)",
-        "grade": 21,
+        "grade": 20,
         "partial_question_info": [
           {
             "partial_question": {
@@ -8743,14 +8743,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -8777,7 +8777,7 @@
   {
     "name": "Elif",
     "surname": "Ceylan",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Elif Ceylan_254145_assignsubmission_file",
     "question_info": [
       {
@@ -8932,7 +8932,7 @@
           ]
         },
         "code": "# Question 4 - Elif S\u00c4\u00b1rma Ceylan\n\nchoices, i = [], 1\n\nwhile i<=4:\n\n    choice = int(input(f\"Enter Choice {i}:\"))\n\t\n    if choice not in range(10):\n        print(\"Please choose a numeral from 0 to 9.\")\n\t\t\n    elif choice in choices:\n        print(\"Please choose a different numeral at each time.\")\n\t\t\n    else:\n        choices.append(choice)\n        i+=1\n\nprint(f\"Your choices are {choices}.\")",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -8968,14 +8968,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -9002,7 +9002,7 @@
   {
     "name": "Emir",
     "surname": "Gencay",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Emir Gencay_254143_assignsubmission_file",
     "question_info": [
       {
@@ -9157,7 +9157,7 @@
           ]
         },
         "code": "# -*- coding: utf-8 -*-\n\"\"\"\nCreated on Fri Mar 15 17:22:27 2024\n\n@author: Emir Gencay\n\"\"\"\n\n\nchoices=[]\nlencho=len((choices))\n\nwhile lencho<4:\n    x=input(f\"Enter choice {lencho+1}:\")\n    try:\n        x = int(x)\n        if x>=0 and x<=9:\n            if x not in choices:\n                choices.append(x)\n                lencho+=1\n            else:\n                print(\"Please choose a different numeral at each time.\")\n        else:\n            print(\"Please choose a numeral from 0 to 9.\")\n    except :\n        print(\"Invalid input. Please enter a numeral.\")\n\nprint(f\"Your choices are {choices}\")\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -9193,14 +9193,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -9227,7 +9227,7 @@
   {
     "name": "Emirhan",
     "surname": "Yuksel",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Emirhan Yuksel_254096_assignsubmission_file",
     "question_info": [
       {
@@ -9382,7 +9382,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\nmy_list=[]\nx=1\nwhile x<5:\n    y=int(input(f\"Enter choice {x}: \"))\n    if y in my_list:\n        print(\"Please choose a different numeral at each time. \")\n    elif y>=0 and y<10:\n        my_list.append(y)\n        x+=1\n    else:\n        print(\"Please choose a numeral from 0 to 9. \")\nprint(f\"Your choices are {my_list}.\")\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -9418,14 +9418,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -9452,7 +9452,7 @@
   {
     "name": "Emre",
     "surname": "Akdere",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Emre Akdere_254094_assignsubmission_file",
     "question_info": [
       {
@@ -9607,7 +9607,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\npool = [0,1,2,3,4,5,6,7,8,9]\nchoices=[]\n\nwhile len(choices)<4:\n    i = int(input(f\"Enter choice {len(choices)+1}:\"))\n    if i in pool:\n        choices.append(i)\n        pool.remove(i)\n    elif i in choices:\n        print(\"Select different one than previous\")\n    else:\n        print(\"Please select a numeral between 0 to 9\")\nif len(choices)==4:\n    print(f\"Your choices are {choices}\")\n\n        \n        \n    \n    \n       ",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -9643,14 +9643,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -9677,7 +9677,7 @@
   {
     "name": "Emre",
     "surname": "Dogan",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Emre Dogan_254071_assignsubmission_file",
     "question_info": [
       {
@@ -9832,7 +9832,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\ni = 1\nliste = []\nwhile len(liste)<4:\n    a = int(input(f\" Enter choice {i} \"))\n    if a in liste:\n            print(\"Please choose a different numeral at each time.\")\n    elif a<= 9 and a>0:\n        i+= 1\n        liste.append(a)\n    elif a<0 or a>9:\n        print(\"Please choose a numeral from 0 to 9.\")\nprint(f\"Your choices are {liste}\")        ",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -9868,14 +9868,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -9902,7 +9902,7 @@
   {
     "name": "Emre",
     "surname": "Karakose",
-    "total_grade": 48,
+    "total_grade": 47,
     "submission_directory": "submissions\\Emre Karakose_254093_assignsubmission_file",
     "question_info": [
       {
@@ -10057,7 +10057,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nkupon = []\ncount = 0\nwhile count < 4:\n    try:\n        number = int(input(\"Please enter a numeral between 0 and 9 (inclusive): \"))\n        if 0 <= number <= 9 and number not in kupon:\n            kupon.append(number)\n            print(\"Numeral \" + str(number) + \" chosen.\")\n            count += 1\n        else:\n            print(\"Invalid. Choose different.\")\n    except ValueError:\n            print(\"Invalid. Choose integer.\")\n            \nprint(\"Your choices are: \", kupon)",
-        "grade": 23,
+        "grade": 22,
         "partial_question_info": [
           {
             "partial_question": {
@@ -10093,14 +10093,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -10127,7 +10127,7 @@
   {
     "name": "Eren",
     "surname": "Aktasli",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Eren Aktasli_254148_assignsubmission_file",
     "question_info": [
       {
@@ -10282,7 +10282,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoices = []\n\nwhile len(choices) < 4:\n    choice = int(input(f\"Enter choice {len(choices) + 1}: \"))\n    \n    if choice < 0 or choice > 9:\n        print(\"Please choose a numeral from 0 to 9.\")\n    elif choice in choices:\n        print(\"Please choose a different numeral at each time.\")\n    else:\n        choices.append(choice)\n\nprint(\"Your choices are\")\nprint(choices)",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -10318,14 +10318,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -10352,7 +10352,7 @@
   {
     "name": "Eylul",
     "surname": "Cortuk",
-    "total_grade": 48,
+    "total_grade": 47,
     "submission_directory": "submissions\\Eylul Cortuk_254103_assignsubmission_file",
     "question_info": [
       {
@@ -10507,7 +10507,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoice = []\nwhile len(choice) <4:\n    num = int(input(f\"Enter choice {len(choice) + 1} \"))\n    if 0<= num and num>=9:\n        if num not in choice:\n            choice.append(num)\n        else:\n            print(\"Please choose a different number at each time\")\n    else:\n        print(\"Please choose a number from 0 to 9\")\n\nprint(f\"Your choices are {choice}\")\n",
-        "grade": 23,
+        "grade": 22,
         "partial_question_info": [
           {
             "partial_question": {
@@ -10543,14 +10543,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -10768,11 +10768,11 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
             "grade": 0
@@ -10993,11 +10993,11 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
             "grade": 0
@@ -11027,7 +11027,7 @@
   {
     "name": "Goktug",
     "surname": "Silahtaroglu",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Goktug Silahtaroglu_254147_assignsubmission_file",
     "question_info": [
       {
@@ -11182,7 +11182,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\nn=0\nmylist=[]\nwhile n<4:\n    a=int(input(\"Enter a number between 0-9: \"))\n    if a<0 or a>9:\n        print(\"Please enter a correct number: \")\n    elif a in mylist:\n        print(\"enter a different number: \")\n    else:\n        mylist.append(a)\n        n+=1\nprint(mylist)\n\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -11218,14 +11218,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -11252,7 +11252,7 @@
   {
     "name": "Gozde",
     "surname": "Tasan",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Gozde Tasan_254130_assignsubmission_file",
     "question_info": [
       {
@@ -11407,7 +11407,7 @@
           ]
         },
         "code": "# -*- coding: utf-8 -*-\n\"\"\"\nCreated on Sat Mar 30 12:22:23 2024\n\n@author: asus\n\"\"\"\n\nsubmitted_numerals, i = [] , 1\nwhile len(submitted_numerals) < 4:\n    \n    numeral = int(input(f\"Enter choice {i}: \"))\n    \n    if  numeral < 0 or numeral > 9:\n        print(\"Please choose a numeral from 0 to 9.\")\n    else:\n        if len(submitted_numerals) == 0:\n            submitted_numerals.append(numeral)\n            i += 1\n        else:\n            if numeral in submitted_numerals:\n                print(\"Please choose a different numeral at each time.\")\n            else:\n                submitted_numerals.append(numeral)\n                i += 1\n                \nprint(f\"Your choices are {submitted_numerals}\")    \n\n        ",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -11443,14 +11443,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -11477,7 +11477,7 @@
   {
     "name": "Gulce",
     "surname": "Ceyhan",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Gulce Ceyhan_254105_assignsubmission_file",
     "question_info": [
       {
@@ -11632,7 +11632,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\npreferences = []\n\nfor n in range(4):\n    while True:\n        pref = int(input(f\"Please provide a number for {n+1}:\"))\n        if 0 <= pref <= 9 and pref not in preferences:            \n            preferences.append(pref)\n            break\n        else:\n            if pref < 0  :\n                print(\"Number that you're providing is not a valid numeral. Please consider a positive number.\")                 \n            elif pref > 9:\n                print(\"Number that you're providing is not a valid numeral.Please consider a number in given interval.\")                 \n            else:\n                print(f\"{pref} has already been taken.Please consider another number in given interval.\")\n                \nprint(f\"Your numbers are {preferences}.\")\n            \n                \n                ",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -11668,14 +11668,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -11702,7 +11702,7 @@
   {
     "name": "Hakan",
     "surname": "Guler",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Hakan Guler_254083_assignsubmission_file",
     "question_info": [
       {
@@ -11857,7 +11857,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\ni = 1\nj = 5\ninterval = range(0,10)\nresult_list = []\n\nwhile i < j:\n    ask = int(input(f\"Enter choice {i}: \"))\n    if ask in interval:\n        if ask not in result_list:\n            result_list.append(ask)\n            i +=1\n        else:\n            print(\"Please choose a different numeral at each time.\")\n    else:\n        print(\"Please choose a numeral from 0 to 9.\")\nprint(f\"Your choices are {result_list}.\")\n        \n        \n    \n    \n\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -11893,14 +11893,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -11927,7 +11927,7 @@
   {
     "name": "Hasan",
     "surname": "Khan",
-    "total_grade": 42,
+    "total_grade": 41,
     "submission_directory": "submissions\\Hasan Khan_254069_assignsubmission_file",
     "question_info": [
       {
@@ -12082,7 +12082,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n#########################################################################\n\nchoices = []\nprint(\"Welcome to the lottery game.\")\nprint(\"Please choose 4 different numerals from 0 to 9.\")\n\nwhile len(choices) < 4:\n    choice = input(\"Enter choice: \")\n    try:\n        num = int(choice)\n        if num < 0 or num > 9:\n            print(\"Please choose a numeral from 0 to 9.\")\n        elif num in choices:\n            print(\"Please choose a different numeral.\")\n        else:\n            choices.append(num)\n    except ValueError:\n        print(\"Please enter a numeral.\")\n\nprint(f\"Your choices are {choices}.\")\n",
-        "grade": 17,
+        "grade": 16,
         "partial_question_info": [
           {
             "partial_question": {
@@ -12118,14 +12118,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -12152,7 +12152,7 @@
   {
     "name": "Ilgin",
     "surname": "Demirci",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Ilgin Demirci_254068_assignsubmission_file",
     "question_info": [
       {
@@ -12307,7 +12307,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nuser_list = []\nwhile len(user_list) != 4:\n    choice = int(input(f\"Enter your number {len(user_list)+1}:\"))\n    if choice <0 or choice > 9:\n        print(\"Please enter a numeral from 0 to 9.\")\n    elif choice in user_list:\n        print(\"Please enter a different number:\")\n    else:\n        user_list.append(choice)\nprint(user_list)\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -12343,14 +12343,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -12377,7 +12377,7 @@
   {
     "name": "Irem",
     "surname": "Arda",
-    "total_grade": 41,
+    "total_grade": 37,
     "submission_directory": "submissions\\Irem Arda_254053_assignsubmission_file",
     "question_info": [
       {
@@ -12532,7 +12532,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nnumber_1 = int(input(\"Enter choice 1: \"))\nnlist = []\n\n\nwhile (0> number_1) or (number_1> 9) :\n    print(\"Please choose a numeral from 0 to 9.\")\n    number_1 = int(input(\"Enter choice 1: \"))\nnlist.append(number_1)    \n  \n\n  \nnumber_2 = int(input(\"Enter choice 2: \"))\nwhile number_2 in nlist:\n    print(\"Please choose a different numearal at each time.\")\n    number_2 = int(input(\"Enter choice 2: \"))\nwhile (0> number_2) or (number_2> 9) :\n    print(\"Please choose a numeral from 0 to 9.\")\n    number_2 = int(input(\"Enter choice 2: \"))\nnlist.append(number_2)    \n\n\nnumber_3 = int(input(\"Enter a choice 3:\"))\nwhile number_3 in nlist:\n    print(\"Please choose a different numeral at each time. \")\n    number_3 = int(input(\"Enter choice 3: \"))\nwhile (0 > number_3) or (number_3 > 9):\n    print(\"Please choose a numeral from 0 to 9.\")\n    number_3 = int(input(\"Enter choice 3: \"))\nnlist.append(number_3)\n\nnumber_4 = int(input(\"Enter a choice 4:\"))\nwhile number_4 in nlist:\n    print(\"Please choose a different numeral at each time. \")\n    number_4 = int(input(\"Enter choice 4: \"))\nwhile (0 > number_4) or (number_4 > 9):\n    print(\"Please choose a numeral from 0 to 9.\")\n    number_4 = int(input(\"Enter choice 4: \"))\nnlist.append(number_4)\n\n\nprint(nlist)",
-        "grade": 16,
+        "grade": 12,
         "partial_question_info": [
           {
             "partial_question": {
@@ -12562,17 +12562,17 @@
                 8
               ]
             },
-            "grade": 4
+            "grade": 0
           },
           {
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
             "grade": 0
@@ -12602,7 +12602,7 @@
   {
     "name": "Irem",
     "surname": "Ozgul",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Irem Ozgul_254116_assignsubmission_file",
     "question_info": [
       {
@@ -12757,7 +12757,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoices = []\nk=0\nwhile(k<4):\n    a = int(input(f\"Enter your guess: \"))\n    if a<0:\n        print(\"Please enter a positive number.\")\n    elif a>9:\n        print(\"Please enter a number between 0 and 9.\")\n    elif a in choices:\n        print(\"Please enter a different number.\")\n    else:\n        choices.append(a)\n        k+=1\n\nprint(f\"Your choices are {choices}.\")\n\n\n\n\n\n\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -12793,14 +12793,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -12827,7 +12827,7 @@
   {
     "name": "Irmak",
     "surname": "Atalay",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Irmak Atalay_254066_assignsubmission_file",
     "question_info": [
       {
@@ -12982,7 +12982,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nlottery_numbers_selected = []\n\nwhile len(lottery_numbers_selected) < 4:\n    choice = int(input(f\"Enter choice {len(lottery_numbers_selected) + 1}: \"))\n    \n    if choice < 0 or choice > 9:\n        print(\"Please choose a numeral from 0 to 9.\")\n    elif choice in lottery_numbers_selected:\n        print(\"Please choose a different numeral at each time.\")\n    else:\n        lottery_numbers_selected.append(choice)\n\nprint(\"Your choices are\")\nprint(lottery_numbers_selected)",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -13018,14 +13018,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -13052,7 +13052,7 @@
   {
     "name": "Irmak",
     "surname": "Canbaz",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Irmak Canbaz_254124_assignsubmission_file",
     "question_info": [
       {
@@ -13207,7 +13207,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\ni = 1\nmy_list = []\nwhile i < 5:\n    choose = int(input(f\"Enter choice {i}: \\t\"))\n    if choose in range(0,10) and choose not in my_list:\n        my_list.append(choose)\n        i += 1\n    else:\n        if choose not in range(0,10):\n            print(\"Please choose a numeral from 0 to 9.\")\n        elif choose in my_list:\n            print(\"Please choose a different numeral at each time\")\n        continue\nprint(f\"Your choices are {my_list}\")",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -13243,14 +13243,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -13277,7 +13277,7 @@
   {
     "name": "Kaan",
     "surname": "Aydogan",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Kaan Aydogan_254086_assignsubmission_file",
     "question_info": [
       {
@@ -13432,7 +13432,7 @@
           ]
         },
         "code": "# -*- coding: utf-8 -*-\n\"\"\"\nCreated on Sat Nov 11 19:15:31 2023\n\n@author: kaan\n\"\"\"\n\nchoices = []\n\nfor i in range(1, 5):\n    while True:\n            choice = int(input(f\"Enter choice {i}: \"))\n\n            if 0 <= choice <= 9 and choice not in choices:\n                    choices.append(choice)\n                    break\n            elif choice in choices:\n                    print(\"Please choose a different numeral at each time.\")\n            else:\n                    print(\"Please choose a numeral from 0 to 9.\")\nprint(f\"Your choices are: {choices}.\")\n            ",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -13468,14 +13468,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -13502,7 +13502,7 @@
   {
     "name": "Kaan",
     "surname": "Kagnicioglu",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Kaan Kagnicioglu_254150_assignsubmission_file",
     "question_info": [
       {
@@ -13657,7 +13657,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoices = []\ni = 1\n\nwhile i <= 4:\n    choice = int(input(f\"Enter {i} choice: \"))\n    \n    if choice < 0 or choice >= 10:\n        print(\"Please enter a number between 0 and 10\")\n    elif choice in choices:\n        print(\"You have choosed this number before, enter a different one.\")\n    else:\n        choices.append(choice)\n        i += 1\n\nprint(f\"Choices: {choices}\")",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -13693,14 +13693,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -13727,7 +13727,7 @@
   {
     "name": "Kaan",
     "surname": "Olcay",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Kaan Olcay_254127_assignsubmission_file",
     "question_info": [
       {
@@ -13882,7 +13882,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\nchoicenum = 1\nchoi = []\n\nwhile (choicenum <= 4):\n    gue = int(input(f\"Enter choice {choicenum}: \"))\n    if (gue<0 or gue>9):\n        print(\"Please choose a numeral from 0 to 9.\")\n    elif (gue in choi):\n        print(\"Please choose a different numeral at each time.\")\n    else:\n        choicenum += 1\n        choi.append(gue)\n\nprint(f\"Your choices are {choi}\")\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -13918,14 +13918,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -13952,7 +13952,7 @@
   {
     "name": "Kaan",
     "surname": "Uluturk",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Kaan Uluturk_254122_assignsubmission_file",
     "question_info": [
       {
@@ -14107,7 +14107,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\ndef get_lottery_game():\n    lottery_numbers = []\n\n    for i in range(1, 5):\n        while True:\n            try:\n                num = int(input(f\"Enter choice {i}: \"))\n                if num < 0 or num > 9:\n                    print(\"Invalid input! Please enter a numeral between 0 and 9.\")\n                elif num in lottery_numbers:\n                    print(\"You've already entered this numeral. Please enter a different one.\")\n                else:\n                    lottery_numbers.append(num)\n                    break  \n            except ValueError:\n                print(\"Invalid input! Please enter a numeral between 0 and 9.\")\n    print(\"Your choices are:\", lottery_numbers)\n    return lottery_numbers\n\nlottery_numbers = get_lottery_game()",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -14143,14 +14143,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -14177,7 +14177,7 @@
   {
     "name": "Kerem",
     "surname": "Sezener",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Kerem Sezener_254077_assignsubmission_file",
     "question_info": [
       {
@@ -14332,7 +14332,7 @@
           ]
         },
         "code": "\nchoices = []\nfor i in range(4):\n    number = int(input(f\"Enter choice {i + 1}: \"))\n\n    while True:\n        if number < 0 or number > 9:\n            print(\"Please choose a numeral from 0 to 9.\")\n            number = int(input(f\"Enter choice {i + 1}: \"))\n        elif number in choices:\n            print(\"Please choose a different numeral at each time.\")\n            number = int(input(f\"Enter choice {i + 1}: \"))  \n        else:\n            break\n    \n    choices.append(number)\n    \nprint(\"Your choices are\", choices)",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -14368,14 +14368,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -14402,7 +14402,7 @@
   {
     "name": "Kerem",
     "surname": "Toprakseven",
-    "total_grade": 42,
+    "total_grade": 41,
     "submission_directory": "submissions\\Kerem Toprakseven_254133_assignsubmission_file",
     "question_info": [
       {
@@ -14557,7 +14557,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\nlottery_numbers = []\nwhile len(lottery_numbers) < 4:\n    number = int(input(\"Enter a lottery numeral (0-9): \"))   \n    if 0 <= number <= 9:\n        lottery_numbers.append(number)\n    else:\n        print(\"Please choose a numeral from 0 to 9.\")\nprint(\"Your lottery numbers are:\", lottery_numbers)\n\n    ",
-        "grade": 17,
+        "grade": 16,
         "partial_question_info": [
           {
             "partial_question": {
@@ -14593,14 +14593,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -14627,7 +14627,7 @@
   {
     "name": "Lamia",
     "surname": "Ata",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Lamia Ata_254092_assignsubmission_file",
     "question_info": [
       {
@@ -14782,7 +14782,7 @@
           ]
         },
         "code": "lottery_list=[]\nwhile len(lottery_list)<4:\n    my_choice=int(input('Please enter number: '))\n    if (my_choice)<0:\n        print('please choose a numeral from 0 to 9.')\n    elif my_choice>9:\n        print('please choose a numeral from 0 to 9.')\n    else:\n        if my_choice not in lottery_list:    \n            lottery_list.append(my_choice)\n        else:\n            print('Please choose a different numeral at each time.')\n\nprint(lottery_list)\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -14818,14 +14818,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -14852,7 +14852,7 @@
   {
     "name": "Lara",
     "surname": "Arin",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Lara Arin_254132_assignsubmission_file",
     "question_info": [
       {
@@ -15007,7 +15007,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nend_user = []\nn = 1\nwhile True:\n    if len(end_user) == 4:\n        break\n    number = int(input(f\"Enter your choice{n}: \"))\n    if number < 0 :\n        print(\"please write number greater than zero\")\n    elif number > 9 :\n        print(\"write number smaller than 9\")\n    elif number in end_user:\n        print(\"please don't write same number\")\n    else:\n        n += 1\n        end_user.append(number)\nprint(end_user)\n\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -15043,14 +15043,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -15077,7 +15077,7 @@
   {
     "name": "Mahmut",
     "surname": "Aydin",
-    "total_grade": 37,
+    "total_grade": 12,
     "submission_directory": "submissions\\Mahmut Aydin_254060_assignsubmission_file",
     "question_info": [
       {
@@ -15232,7 +15232,7 @@
           ]
         },
         "code": "",
-        "grade": 25,
+        "grade": 0,
         "partial_question_info": [
           {
             "partial_question": {
@@ -15247,7 +15247,7 @@
                 8
               ]
             },
-            "grade": 8
+            "grade": 0
           },
           {
             "partial_question": {
@@ -15262,20 +15262,20 @@
                 8
               ]
             },
-            "grade": 8
+            "grade": 0
           },
           {
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 0
           },
           {
             "partial_question": {
@@ -15288,7 +15288,7 @@
                 4
               ]
             },
-            "grade": 4
+            "grade": 0
           }
         ],
         "note": ""
@@ -15302,7 +15302,7 @@
   {
     "name": "Melike",
     "surname": "Karakaya",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Melike Karakaya_254128_assignsubmission_file",
     "question_info": [
       {
@@ -15457,7 +15457,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\n#range 10\n#int input \" Enter choice \"\n# if number < 0\n\ncount = 1\nnumber_list = []\n\nwhile count < 5:\n    \n    number = int(input(f\"Enter choice {count}: \"))\n    \n    if (number<0):\n        print(\"Please choose a numeral from 0 to 9.\")\n        \n    elif (number > 9):\n        print(\"Please choose a numeral from 0 to 9.\")\n    \n    \n    elif (number in number_list):\n        print(\"Please choose a different numeral at each time.\")\n        \n    else:\n        number_list.append(number)\n        count+=1\n        \nprint(f\"Your choices are {number_list}.\")\n    ",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -15493,14 +15493,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -15527,7 +15527,7 @@
   {
     "name": "Melisa",
     "surname": "Isel",
-    "total_grade": 48,
+    "total_grade": 47,
     "submission_directory": "submissions\\Melisa Isel_254048_assignsubmission_file",
     "question_info": [
       {
@@ -15682,7 +15682,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nlottery_numbers_selected = []\n\nwhile len(lottery_numbers_selected) < 4:\n    choice = int(input(f\"enter choice {len(lottery_numbers_selected) +1}:\"))\n    \n    if choice < 0 or choice > 9:\n        print(f\"please choose a number from 0 to 9\")\n        \n    elif choice in lottery_numbers_selected:\n        print(f\"please choose a different numeral at each time\")\n        \n    else:\n        lottery_numbers_selected.append(choice)\n        \nprint(\"your choices are\")\nprint(lottert_numbers_selected)\n\n",
-        "grade": 23,
+        "grade": 22,
         "partial_question_info": [
           {
             "partial_question": {
@@ -15718,14 +15718,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -15752,7 +15752,7 @@
   {
     "name": "Mert",
     "surname": "Guner",
-    "total_grade": 46,
+    "total_grade": 45,
     "submission_directory": "submissions\\Mert Guner_254140_assignsubmission_file",
     "question_info": [
       {
@@ -15907,7 +15907,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\n# Initialize an empty list to store user choices\nchoices = []\n\n# Function to check if a choice is valid\ndef is_valid_choice(choice):\n    return isinstance(choice, int) and 0 <= choice <= 9 and choice not in choices\n\n# Function to prompt user for input and validate it\ndef get_valid_choice(number):\n    while True:\n        choice = input(\"Enter choice {}: \".format(number))\n        try:\n            choice = int(choice)\n            if is_valid_choice(choice):\n                return choice\n            else:\n                print(\"Please choose a numeral from 0 to 9 and make sure it's not submitted already.\")\n        except ValueError:\n            print(\"Invalid input. Please enter an integer.\")\n\n# Prompt user for choices\nfor i in range(1, 5):\n    choice = get_valid_choice(i)\n    choices.append(choice)\n\n# Print the final choices\nprint(\"Your choices are {}.\".format(choices))",
-        "grade": 21,
+        "grade": 20,
         "partial_question_info": [
           {
             "partial_question": {
@@ -15943,14 +15943,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -15977,7 +15977,7 @@
   {
     "name": "Merve",
     "surname": "Selen",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Merve Selen Karabiyik_254064_assignsubmission_file",
     "question_info": [
       {
@@ -16132,7 +16132,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoices = []\n\nfor i in range(1, 5):\n    while True:\n        choice = int(input(\"Enter choice \" + str(i) + \": \"))\n        \n        if choice < 0 or choice > 9:\n            print(\"Please choose a numeral from 0 to 9.\")\n        elif choice in choices:\n            print(\"Please choose a different numeral at each time.\")\n        else:\n            choices.append(choice)\n            break\n\nprint(\"Your choices are\", choices)\n\n\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -16168,14 +16168,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -16202,7 +16202,7 @@
   {
     "name": "Merve",
     "surname": "Yantac",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Merve Yantac_254120_assignsubmission_file",
     "question_info": [
       {
@@ -16357,7 +16357,7 @@
           ]
         },
         "code": "choicenumber = 1\nchoices = []\n\nwhile (choicenumber <= 4):\n    guess = int(input(f\"Enter choice {choicenumber}: \"))\n    if (guess<0 or guess>9):\n        print(\"Please choose a numeral from 0 to 9.\")\n    elif (guess in choices):\n        print(\"Please choose a different numeral at each time.\")\n    else:\n        choicenumber += 1\n        choices.append(guess)\n\nprint(f\"Your choices are {choices}\")\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -16393,14 +16393,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -16427,7 +16427,7 @@
   {
     "name": "Mine",
     "surname": "Ersoy",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Mine Ersoy_254046_assignsubmission_file",
     "question_info": [
       {
@@ -16582,7 +16582,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\nmy_list = []\nk = 1\nwhile k < 5:\n    try:\n        m = int(input(f\"Enter choice {k}: \"))\n        if m in my_list:\n            print(\"Please choose a different numeral at each time\")\n        elif m >= 0 and m < 10:\n            my_list.append(m)\n            k += 1\n        else:\n            raise ValueError\n    except ValueError:\n        print(\"Please choose a numeral from 0 to 9\")\nprint(my_list)",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -16618,14 +16618,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -16652,7 +16652,7 @@
   {
     "name": "Mustafa",
     "surname": "Nurhat",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Mustafa Nurhat_254151_assignsubmission_file",
     "question_info": [
       {
@@ -16807,7 +16807,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\ni = 1\nliste = []\nwhile len(liste) < 4:\n    a = int(input(f\" Enter choice {i} \"))\n    if a in liste:\n        print(\"Please choose a different numeral at each time.\")\n    elif a <= 9 and a > 0:\n        i += 1\n        liste.append(a)\n    elif a < 0 or a > 9:\n        print(\"Please choose a numeral from 0 to 9.\")\n        \n        \n        \n        \n        \nprint(f\"Your choices are {liste}\")\n\n\n\n\n\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -16843,14 +16843,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -16877,7 +16877,7 @@
   {
     "name": "Naz",
     "surname": "Ozer",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Naz Ozer_254108_assignsubmission_file",
     "question_info": [
       {
@@ -17032,7 +17032,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoices = []\nprint(\"Please enter 4 different numbers from 0 to 9.\")\n    \nwhile len(choices) < 4:\n    number = int(input(f\"Enter choice {len(choices) + 1}: \"))\n    \n    if 0 <= number and number <= 9:\n        \n        if number not in choices:\n            choices.append(number)\n        \n        else:\n            print(\"Please choose a different numeral at each time.\")\n    \n    else:\n        print(\"Please choose a numeral from 0 to 9.\")\n\nprint(f\"Your choices are: {choices}\")",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -17068,14 +17068,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -17102,7 +17102,7 @@
   {
     "name": "Nisa",
     "surname": "Erdem",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Nisa Erdem_254139_assignsubmission_file",
     "question_info": [
       {
@@ -17257,7 +17257,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\ndef get_lottery_choices():\n    choices = []\n    while len(choices) < 4:\n        choice = input(\"Enter choice {}: \".format(len(choices) + 1))\n        try:\n            choice = int(choice)\n            if choice < 0 or choice > 9:\n                print(\"Please choose a numeral from 0 to 9.\")\n            elif choice in choices:\n                print(\"Please choose a different numeral at each time.\")\n            else:\n                choices.append(choice)\n        except ValueError:\n            print(\"Please enter a valid integer.\")\n\n    return choices\n\n# Get the lottery choices from the user\nlottery_choices = get_lottery_choices()\n\n# Print the final choices\nprint(\"Your choices are\", lottery_choices)\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -17293,14 +17293,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -17327,7 +17327,7 @@
   {
     "name": "Nisan",
     "surname": "Delibalta",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Nisan Delibalta_254070_assignsubmission_file",
     "question_info": [
       {
@@ -17482,7 +17482,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoices = []\n\nwhile len(choices) < 4 :\n    choice = int(input(f\"Enter choice {len(choices)+1}: \")) \n    \n    if choice < 0 or choice > 9:\n        print(f\"Please choose a numeral from 0 to 9\")\n    elif choice not in choices:\n        choices.append(choice)\n    else:\n        print(\"Please choose a different numeral at each time.\")\n        \nprint(f\"Your choices are {choices}\")\n        \n        \n        \n        \n    \n    \n    ",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -17518,14 +17518,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -17743,11 +17743,11 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
             "grade": 0
@@ -17777,7 +17777,7 @@
   {
     "name": "Oguz",
     "surname": "Gozaydin",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Oguz Gozaydin_254072_assignsubmission_file",
     "question_info": [
       {
@@ -17932,7 +17932,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nliste = []\nk = 1\nwhile k < 5:\n    x = int(input(f\"Enter choice {k}: \"))\n    if x in liste:\n        print(\"Please choose a different numeral at each time\")\n    elif x >= 0 and x < 10:\n        liste.append(x)\n        k += 1\n    else:\n        print(\"Please choose a numeral from 0 to 9\")\nprint(liste)",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -17968,14 +17968,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -18002,7 +18002,7 @@
   {
     "name": "Onur",
     "surname": "Okcular",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Onur Okcular_254081_assignsubmission_file",
     "question_info": [
       {
@@ -18157,7 +18157,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoices = list()\nx = 1 \n\nwhile (len(choices) < 4):\n    choice = int(input(f'Enter choice {x}: '))\n    if ((choice < 0) or (choice > 9)):\n        print(\"Please choose a numeral from 0 to 9.\")\n    else:\n        if (len(choices) == 0):\n            choices.append(choice)\n            x = x + 1\n        else:\n            if (choice in choices):\n                print(\"Please choose a different numeral at each time.\")\n            else:\n                choices.append(choice)\n                x += 1\n\nprint(f'Your choices are {choices}.')\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -18193,14 +18193,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -18227,7 +18227,7 @@
   {
     "name": "Onur",
     "surname": "Sendurgut",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Onur Sendurgut_254088_assignsubmission_file",
     "question_info": [
       {
@@ -18382,7 +18382,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nnum_choices = 4\n\nchoices = []\n\nfor i in range(num_choices):\n  while True:\n    try:\n      choice = int(input(f\"Enter choice {i + 1}: \"))\n      if 0 <= choice <= 9:\n        if choice not in choices:\n          choices.append(choice)\n          break\n        else:\n          print(\"Please choose a different numeral at each time.\")\n      else:\n        print(\"Please choose a numeral from 0 to 9.\")\n    except ValueError:\n      print(\"Invalid input. Please enter an integer.\")\n\nprint(\"Your choices are:\", choices)\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -18418,14 +18418,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -18452,7 +18452,7 @@
   {
     "name": "Sedef",
     "surname": "Can",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Sedef Can_254112_assignsubmission_file",
     "question_info": [
       {
@@ -18607,7 +18607,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nlist_choice = []\na = 0\n\nwhile a < 4:\n    list_choice_2 = int(input(f\"Enter choice {a+1}: \"))\n    if list_choice_2 < 0 or list_choice_2 > 9:\n        print(\"Please choose a numeral from 0 to 9.\")\n    elif list_choice_2 in list_choice:\n        print(\"Please choose a different numeral at each time.\")\n    else: \n        list_choice.append(list_choice_2)\n        a += 1\n        \nprint(f\"Your choices are {list_choice}\")",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -18643,14 +18643,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -18677,7 +18677,7 @@
   {
     "name": "Selin",
     "surname": "Armagan",
-    "total_grade": 42,
+    "total_grade": 41,
     "submission_directory": "submissions\\Selin Armagan_254121_assignsubmission_file",
     "question_info": [
       {
@@ -18832,7 +18832,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nmy_list=[]\nx=0\nwhile x<4:\n    myin_list=int(input(f\"Enter choice{x+1}:\"))\n    if myin_list<0 or myin_list>9:\n        print(\"Please choose a numeral from 0 to 9.\")\n    elif myin_list in my_list:\n        print(\"Please choose a different numeral each time.\")\n    else:\n        my_list.append(myin_list)\n        x+=1\nprint(\"Choices selected:\",my_list) \n    \n",
-        "grade": 17,
+        "grade": 16,
         "partial_question_info": [
           {
             "partial_question": {
@@ -18868,14 +18868,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -18902,7 +18902,7 @@
   {
     "name": "Selin",
     "surname": "Yildiz",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Selin Yildiz_254054_assignsubmission_file",
     "question_info": [
       {
@@ -19057,7 +19057,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoice_list =[]\n\nwhile len(choice_list) < 4:\n    choice = int(input(f\"Enter choice {len(choice_list) + 1 }.\"))\n   \n    if choice < 0 or choice > 9:\n        print(\"Please enter a numeral from 0 to 9.\")\n        \n    elif choice in choice_list:\n        print(\"Please choose a different numeral at each time.\")\n        \n    else:\n        choice_list.append(choice)\n        \nprint(f\"Your choices are {choice_list}.\")\n\n    ",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -19093,14 +19093,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -19127,7 +19127,7 @@
   {
     "name": "Sevval",
     "surname": "Bilgin",
-    "total_grade": 50,
+    "total_grade": 25,
     "submission_directory": "submissions\\Sevval Bilgin_254057_assignsubmission_file",
     "question_info": [
       {
@@ -19282,7 +19282,7 @@
           ]
         },
         "code": "",
-        "grade": 25,
+        "grade": 0,
         "partial_question_info": [
           {
             "partial_question": {
@@ -19297,7 +19297,7 @@
                 8
               ]
             },
-            "grade": 8
+            "grade": 0
           },
           {
             "partial_question": {
@@ -19312,20 +19312,20 @@
                 8
               ]
             },
-            "grade": 8
+            "grade": 0
           },
           {
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 0
           },
           {
             "partial_question": {
@@ -19338,7 +19338,7 @@
                 4
               ]
             },
-            "grade": 4
+            "grade": 0
           }
         ],
         "note": ""
@@ -19352,7 +19352,7 @@
   {
     "name": "Seyit",
     "surname": "Atici",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Seyit Atici_254135_assignsubmission_file",
     "question_info": [
       {
@@ -19507,7 +19507,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoice_list = []\n\nfor i in range(1, 5):\n    x = int(input(f\"Enter choice {i}: \"))\n    while x in choice_list or x < 0 or x > 9:\n        if x in choice_list:\n            print(\"Please choose a different numeral at each time.\")\n        else:\n            print(\"Please choose a numeral from 0 to 9.\")\n        x = int(input(f\"Enter choice {i}: \"))\n    choice_list.append(x)\n\n\nprint(f\"Your choices are {choice_list}.\")",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -19543,14 +19543,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -19577,7 +19577,7 @@
   {
     "name": "Sinem",
     "surname": "Turhan",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Sinem Turhan_254051_assignsubmission_file",
     "question_info": [
       {
@@ -19732,7 +19732,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoices = []\nwhile len(choices) < 4:\n    choice = input(f\"Enter choice {len(choices) + 1}: \")\n    if not choice.isdigit():\n        print(\"Please choose a numeral from 0 to 9.\")\n        continue\n    choice = int(choice)\n    if choice < 0 or choice > 9:\n        print(\"Please choose a numeral from 0 to 9.\")\n        continue\n    if choice in choices:\n        print(\"Please choose a different numeral at each time.\")\n        continue\n    choices.append(choice)\n\nprint(f\"Your choices are {choices}.\")\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -19768,14 +19768,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -19802,7 +19802,7 @@
   {
     "name": "Su",
     "surname": "Aktas",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Su Aktas_254123_assignsubmission_file",
     "question_info": [
       {
@@ -19957,7 +19957,7 @@
           ]
         },
         "code": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\nCreated on Sun Mar 31 21:38:16 2024\n\n@author: aleynasuaktas\n\"\"\"\ndef get_lottery_choices():\n    choices = []\n\n    while len(choices) < 4:\n        choice = input(\"Enter choice {}: \".format(len(choices) + 1))\n\n        \n        if not choice.isdigit():\n            print(\"Please enter a valid numeral.\")\n            continue\n\n        choice = int(choice)\n\n \n        if choice < 0 or choice > 9:\n            print(\"Please choose a numeral from 0 to 9.\")\n            continue\n\n  \n        if choice in choices:\n            print(\"Please choose a different numeral at each time.\")\n            continue\n\n        choices.append(choice)\n\n    return choices\n\n\ndef main():\n    print(\"Please choose 4 different numerals from 0 to 9.\")\n\n    \n    lottery_choices = get_lottery_choices()\n\n    print(\"Your choices are {}.\".format(lottery_choices))\n\nif __name__ == \"__main__\":\n    main()\n",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -19993,14 +19993,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -20027,7 +20027,7 @@
   {
     "name": "Suay",
     "surname": "Hatalmis",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Suay Hatalmis_254082_assignsubmission_file",
     "question_info": [
       {
@@ -20182,7 +20182,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\na=[]\ni=1\nwhile (i<=4):\n    x=str(input(f\"Enter choice {i}: \"))\n    x=int(x)\n    if x not in range(0,10):\n        print(\"Please choose a numeral from 0 to 9\")\n    elif (x in a):\n        print(\"Please choose a different numeral at each time\")\n    else:\n        a.append(x)\n        i+=1\nprint(f\"Your choices are {a}\")",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -20218,14 +20218,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -20443,11 +20443,11 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
             "grade": 0
@@ -20477,7 +20477,7 @@
   {
     "name": "Taha",
     "surname": "Tekin",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Taha Tekin_254098_assignsubmission_file",
     "question_info": [
       {
@@ -20632,7 +20632,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nnumbers = []\n\nwhile len(numbers) < 4:\n    choice = input(\"Enter choice \" + str(len(numbers) + 1) + \": \")\n\n    choice = int(choice)\n    if choice < 0 or choice > 9:\n        print(\"Please choose a numeral from 0 to 9.\")\n    elif choice in numbers:\n        print(\"Please choose a different numeral at each time.\")\n    else:\n        numbers.append(choice)\n\nprint(\"Your choices are\", numbers)",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -20668,14 +20668,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -20702,7 +20702,7 @@
   {
     "name": "Toprak",
     "surname": "Calikoglu",
-    "total_grade": 48,
+    "total_grade": 47,
     "submission_directory": "submissions\\Toprak Calikoglu_254049_assignsubmission_file",
     "question_info": [
       {
@@ -20857,7 +20857,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\nemty_list=[]\nx=0\nwhile x<=3:\n    cevap=int(input(\"0 t0 9 a kadar bir say\u00c4\u00b1 giriniz. ikiside dahil.\"))\n    if (cevap<0 or cevap>9):\n        print(\"Please choose a numeral from 0 to 9.\")\n    else:\n        if (cevap not in emty_list):\n            emty_list.append(cevap)\n            x+=1\nprint(emty_list)    \n",
-        "grade": 23,
+        "grade": 22,
         "partial_question_info": [
           {
             "partial_question": {
@@ -20893,14 +20893,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -20927,7 +20927,7 @@
   {
     "name": "Ugur",
     "surname": "Esmeray",
-    "total_grade": 50,
+    "total_grade": 25,
     "submission_directory": "submissions\\Ugur Esmeray_254114_assignsubmission_file",
     "question_info": [
       {
@@ -21082,7 +21082,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\n",
-        "grade": 25,
+        "grade": 0,
         "partial_question_info": [
           {
             "partial_question": {
@@ -21097,7 +21097,7 @@
                 8
               ]
             },
-            "grade": 8
+            "grade": 0
           },
           {
             "partial_question": {
@@ -21112,20 +21112,20 @@
                 8
               ]
             },
-            "grade": 8
+            "grade": 0
           },
           {
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 0
           },
           {
             "partial_question": {
@@ -21138,7 +21138,7 @@
                 4
               ]
             },
-            "grade": 4
+            "grade": 0
           }
         ],
         "note": ""
@@ -21152,7 +21152,7 @@
   {
     "name": "Yagiz",
     "surname": "Boge",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Yagiz Boge_254052_assignsubmission_file",
     "question_info": [
       {
@@ -21307,7 +21307,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nnumbers = []\ncounter = 1\nwhile len(numbers)<4:\n    n = int(input(f\"Enter Choice {counter}: \"))\n    if n >9 or n<0:\n        print(\"Please choose a numeral from 0 to 9.\")\n    elif n in numbers:\n        print(\"PLease choose a different numeral each time.\")\n    else:\n        numbers.append(n)\n        counter += 1\nprint(f\"Your choices are {numbers}.\")",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -21343,14 +21343,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -21377,7 +21377,7 @@
   {
     "name": "Yildiz",
     "surname": "Aslan",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Yildiz Aslan_254059_assignsubmission_file",
     "question_info": [
       {
@@ -21532,7 +21532,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoiceList = []\n\nwhile len(choiceList) < 4:\n    choice = input(f\"Enter choice {len(choiceList) + 1}: \")\n    choice = int(choice)\n    if choice < 0 or choice > 9:\n        print(\"Please choose a numeral from 0 to 9.\")\n    elif choice in choiceList:\n        print(\"Please choose a different numeral at each time.\")\n    else:\n        choiceList.append(choice)\n\n\nprint(\"Your choices are:\", choiceList)",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -21568,14 +21568,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {
@@ -21602,7 +21602,7 @@
   {
     "name": "Zeynep",
     "surname": "Okumusoglu",
-    "total_grade": 50,
+    "total_grade": 49,
     "submission_directory": "submissions\\Zeynep Okumusoglu_254044_assignsubmission_file",
     "question_info": [
       {
@@ -21757,7 +21757,7 @@
           ]
         },
         "code": "############################################################################\n# Write your script down below.\n# You script should work for the following cases:\n# Case 1: Negative input\n# Case 2: Input out of range\n# Case 3: Repeated input\n# It is required for above cases to work to get the full score.\n############################################################################\n\nchoices = []\n\nfor i in range(1, 5):\n    while True:\n        num = int(input(f\"Enter choice {i}: \"))\n        if 0 <= num <= 9 and num not in choices:\n            choices.append(num)\n            print(f\"Enter choice {i+1}: \")\n            break\n        elif num < 0 or num > 9:\n            print(\"Please choose a numeral from 0 to 9.\")\n        else:\n            print(f\"Please choose a different numeral at each time.\\nEnter choice {i}: \")\n\nprint(\"Your choices are\", choices)",
-        "grade": 25,
+        "grade": 24,
         "partial_question_info": [
           {
             "partial_question": {
@@ -21793,14 +21793,14 @@
             "partial_question": {
               "partial_question": "Q4-3",
               "description": "Tracks number of inserted",
-              "grade": 5,
+              "grade": 4,
               "grade_options": [
                 0,
                 2,
-                5
+                4
               ]
             },
-            "grade": 5
+            "grade": 4
           },
           {
             "partial_question": {

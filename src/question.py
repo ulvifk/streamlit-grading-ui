@@ -23,4 +23,5 @@ class Question:
             pq: dict
             partial_questions.append(PartialQuestion(**pq))
 
+
         self.partial_questions = partial_questions

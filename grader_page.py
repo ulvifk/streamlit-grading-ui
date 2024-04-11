@@ -10,7 +10,7 @@ from streamlit_monaco import st_monaco
 print(st.__file__)
 
 from src.student_question_info import StudentQuestionInfo
-from utils import save_students, load_students
+from utils import save_students, load_students, save_to_excel
 from src.settings_loader import questions
 
 _students = load_students("students.json")
@@ -44,6 +44,10 @@ def create_ace_component_for_question_info(question_info: StudentQuestionInfo):
     return component
 
 def grader_page():
+    save_to_excel_button = st.button("Save to Excel", key="grader-save-to-excel")
+    if save_to_excel_button:
+        save_to_excel(st.session_state["selected_question_name"])
+
     question_names = [question.question for question in questions]
 
     info_col, student_select_col = st.columns(2)
@@ -55,21 +59,21 @@ def grader_page():
 
         selected_question_name = st.selectbox(label="Questions", options=question_names)
         selected_question = questions[question_names.index(selected_question_name)]
+        st.session_state["selected_question_name"] = selected_question.question
 
         if not st.session_state["show_only_ungraded_students"]:
             student_names = [f"{student.name} {student.surname}" for student in _students]
         else:
-            student_names = [f"{student.name} {student.surname}" for student in _students if not student.is_graded[st.session_state["selected_question"]]]
+            student_names = [f"{student.name} {student.surname}" for student in _students if not student.is_graded[selected_question_name]]
 
         students = [student for student in _students if f"{student.name} {student.surname}" in student_names]
 
         st.session_state.selected_student_name = st.selectbox(label="Students", options=student_names, index=0)
         selected_student = students[student_names.index(st.session_state.selected_student_name)]
 
-        question_info = next((info for info in selected_student.question_info if info.question == selected_question),
+        question_info = next((info for info in selected_student.question_info if info.question.question == st.session_state["selected_question_name"]),
                              None)
 
-        st.write(selected_student)
 
     with info_col:
         st.write(f"**Name:** {selected_student.name} {selected_student.surname}")

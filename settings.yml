@@ -1,26 +1,39 @@
 ---
 Questions:
-  - question: "Question1"
-    keys: ["q1", "q01"]
+  - question: "Question3"
+    keys: ["q3", "q03"]
     grade: 25
     partial_questions:
       - partial_question: "Question1.1"
-        description: "Loop Kullandımı?"
+        description: "Is double nested loop used?"
         grade: 10
-        grade_options: [0, 5, 10]
+        grade_options: [0, 2, 5, 8, 10]
       - partial_question: "Question1.2"
-        description: ""
+        description: "Is shape correct?"
         grade: 15
-        grade_options: [0, 5, 10, 15]
-  - question: "Question2"
-    keys: ["q2", "q02"]
+        grade_options: [0, 2, 3, 5]
+      - partial_question: "Question1.3"
+        description: "Is output correct?"
+        grade: 15
+        grade_options: [ 0, 2, 5, 8, 10 ]
+
+  - question: "Question4"
+    keys: [ "q4", "q04" ]
     grade: 25
     partial_questions:
-      - partial_question: "Question2.1"
-        description: ""
-        grade: 10
-        grade_options: [0, 5, 10]
-      - partial_question: "Question2.2"
-        description: ""
-        grade: 15
-        grade_options: [0, 5, 10, 15]
+      - partial_question: "Q4-1"
+        description: "If check for 0 <= x < 10"
+        grade: 8
+        grade_options: [ 0, 2, 4, 6, 8 ]
+      - partial_question: "Q4-2"
+        description: "If check for different values"
+        grade: 8
+        grade_options: [ 0, 2, 4, 6, 8 ]
+      - partial_question: "Q4-3"
+        description: "Tracks number of inserted"
+        grade: 4
+        grade_options: [ 0, 2, 5 ]
+      - partial_question: "Q4-4"
+        description: "Correctly prints out the list"
+        grade: 4
+        grade_options: [ 0, 2, 4 ]

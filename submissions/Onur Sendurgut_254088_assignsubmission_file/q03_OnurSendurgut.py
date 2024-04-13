@@ -1,0 +1,20 @@
+matrix = [[1, 2, 3], [4, 5, 6]]
+transpose = None
+
+############################################################################
+# Do not change the code above.
+# Above code will be used in testing your script.
+# Write your script down below.
+# You are expected to calculate the transpose of the given matrix, and assign 
+#     it to the variable 'transpose'.
+############################################################################
+
+
+
+transpose = []  # Create an empty list for the transpose
+for col in range(len(matrix[0])):
+  transpose.append([])
+  for row in range(len(matrix)):
+    transpose[col].append(matrix[row][col])
+
+print(transpose)

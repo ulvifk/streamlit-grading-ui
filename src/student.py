@@ -9,6 +9,7 @@ from .settings_loader import questions
 class Student:
     name: str
     surname: str
+    student_number: str
     submission_directory: str
     total_grade: float
     question_info: list[StudentQuestionInfo]

@@ -1,3 +1,4 @@
+import pandas as pd
 import yaml
 import os
 import zipfile
@@ -8,11 +9,9 @@ from openpyxl.workbook import Workbook
 from openpyxl.worksheet.table import Table, TableStyleInfo
 
 from src.question import Question
-from src.student import Student
-import pandas as pd
 from src.settings_loader import questions
-from src.student_question_info import StudentQuestionInfo
-
+from src.student import Student
+from unidecode import unidecode
 
 def timeout_handler(signum, frame):
     print("Timeout occurred")
@@ -28,6 +27,24 @@ def get_all_student_submission_paths() -> list[str]:
             student_submission_paths.append(full_path)
 
     return student_submission_paths
+
+def get_student_names(students: Student):
+    df = pd.read_csv("student_list.csv")
+
+    for student in students:
+        row = get_corresponding_row(student, df)
+        print(row["NAME"], row["SURNAME"])
+
+def get_corresponding_row(student: Student, df: pd.DataFrame):
+    for index, row in df.iterrows():
+        unidecoded_name = unidecode(row["NAME"]).lower().split(" ")
+        unidecoded_surname = unidecode(row["SURNAME"]).lower()
+        for name in unidecoded_name:
+            if name in student.name.lower() and unidecoded_surname in student.surname.lower():
+                return row
+
+    raise ValueError(f"Student {student.name} {student.surname} not found in the student list")
+
 
 def load_students(file_path=None, json_string=None):
     if file_path is None and json_string is None:
@@ -97,10 +114,6 @@ def re_init_question(student: Student, question: Question):
     student.update()
 
 
-
-
-
-
 def re_init_question_of_all_students(students, question: Question):
     for student in students:
         re_init_question(student, question)
@@ -126,5 +139,9 @@ def unzip_all_in_directory(directory):
 
 
 if __name__ == "__main__":
+    # unzip_all_in_directory("./submissions")
     students = load_students()
+    get_student_names(students)
     x=0
+
+

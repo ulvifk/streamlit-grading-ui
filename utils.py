@@ -28,19 +28,25 @@ def get_all_student_submission_paths() -> list[str]:
 
     return student_submission_paths
 
-def get_student_names(students: Student):
+def get_student_names(students: list[Student]):
     df = pd.read_csv("student_list.csv")
 
     for student in students:
         row = get_corresponding_row(student, df)
-        print(row["NAME"], row["SURNAME"])
+        student.student_number = row["STD NO"]
+        student.name = row["NAME"]
+        student.surname = row["SURNAME"]
 
 def get_corresponding_row(student: Student, df: pd.DataFrame):
     for index, row in df.iterrows():
         unidecoded_name = unidecode(row["NAME"]).lower().split(" ")
         unidecoded_surname = unidecode(row["SURNAME"]).lower()
         for name in unidecoded_name:
-            if name in student.name.lower() and unidecoded_surname in student.surname.lower():
+            if name in unidecode(student.name).lower() and unidecoded_surname in unidecode(student.surname).lower():
+                return row
+
+        if len(unidecoded_name) > 1:
+            if unidecoded_name[0] in unidecode(student.name).lower() and unidecoded_name[1] in unidecode(student.surname).lower():
                 return row
 
     raise ValueError(f"Student {student.name} {student.surname} not found in the student list")

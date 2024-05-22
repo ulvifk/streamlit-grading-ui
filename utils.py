@@ -59,8 +59,8 @@ def load_students(file_path=None, json_string=None):
         students = []
         for student_submission_dir in student_submission_dirs:
             students.append(Student(
-                name=student_submission_dir.split("\\")[-1].split("_")[0].split(" ")[0],
-                surname=student_submission_dir.split("\\")[-1].split("_")[0].split(" ")[1],
+                name=student_submission_dir.split("/")[-1].split("_")[0].split(" ")[0],
+                surname=student_submission_dir.split("/")[-1].split("_")[0].split(" ")[1],
                 submission_directory=student_submission_dir,
             ))
 
@@ -80,11 +80,11 @@ def save_to_excel(q_name):
     students = load_students("students.json")
 
     question = next((question for question in questions if question.question == q_name), None)
-    columns = ["Name", "Surname"] + [partial_q.partial_question for partial_q in question.partial_questions] + ["Total Grade"]
+    columns = ["STD NO", "NAME", "SURNAME"] + [partial_q.description for partial_q in question.partial_questions] + ["Total Grade"]
     df = pd.DataFrame(columns=columns)
     for student in students:
         student_q_info = next((q_info for q_info in student.question_info if q_info.question.question == q_name), None)
-        row = [student.name, student.surname]
+        row = [student.student_number, student.name, student.surname]
         for p_q_info in student_q_info.partial_question_info:
             row.append(p_q_info.grade)
         row.append(student_q_info.grade)
@@ -100,8 +100,6 @@ def save_to_excel(q_name):
 
     # Define a table style
     tab = Table(displayName="Table1", ref=f"A1:{chr(65 + len(df.columns) - 1)}{len(df) + 1}")
-
-
 
     # Add the table to the worksheet
     ws.add_table(tab)
@@ -147,7 +145,8 @@ def unzip_all_in_directory(directory):
 if __name__ == "__main__":
     # unzip_all_in_directory("./submissions")
     students = load_students()
-    get_student_names(students)
+    print(len(students))
+    save_students(students)
     x=0
 
 

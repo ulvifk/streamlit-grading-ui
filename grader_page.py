@@ -5,7 +5,6 @@ from time import sleep
 
 import streamlit as st
 from streamlit_ace import st_ace
-from streamlit_monaco import st_monaco
 
 print(st.__file__)
 

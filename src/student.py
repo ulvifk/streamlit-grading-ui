@@ -15,9 +15,10 @@ class Student:
     question_info: list[StudentQuestionInfo]
     is_graded: dict[str, bool]
 
-    def __init__(self, name, surname, submission_directory, total_grade=None, question_info=None, is_graded=None):
+    def __init__(self, name, surname, submission_directory, student_number="", total_grade=None, question_info=None, is_graded=None):
         self.name = name
         self.surname = surname
+        self.student_number = student_number
         self.submission_directory = submission_directory
 
         self.total_grade = 0 if total_grade is None else total_grade
@@ -67,6 +68,7 @@ class Student:
         return {
             "name": self.name,
             "surname": self.surname,
+            "student_number": self.student_number,
             "total_grade": self.total_grade,
             "submission_directory": self.submission_directory,
             "question_info": [info.__dict__() for info in self.question_info],

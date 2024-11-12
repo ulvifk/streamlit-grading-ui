@@ -1,4 +1,7 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+
+from pygments.lexer import default
+
 from .partial_question import PartialQuestion
 
 @dataclass()
@@ -6,7 +9,7 @@ class Question:
     question: str
     keys: list[str]
     grade: float
-    partial_questions: list[PartialQuestion]
+    partial_questions: list[PartialQuestion] = field(default_factory=list)
 
     def __dict__(self):
         return {
@@ -17,6 +20,10 @@ class Question:
         }
 
     def __post_init__(self):
+        if self.partial_questions is None:
+            self.partial_questions = []
+            return
+
         partial_questions = []
 
         for pq in self.partial_questions:

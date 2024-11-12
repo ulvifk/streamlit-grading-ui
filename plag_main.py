@@ -1,22 +1,16 @@
 import os
 import shutil
-import unicodedata
-import pickle
 
 from fpdf import FPDF
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
 
-from src.plag_checker.clusterer import cluster
-from src.plag_checker.plag_checker import PlagiarismChecker
+from src.classroom import ClassroomBuilder
 from src.plag_checker.pair_wise import *
-from utils import load_students
-from sentence_transformers import SentenceTransformer, util
+
 
 def pair_wise_output(plagiarism_results, question_name):
     data = sorted(list(plagiarism_results), key=lambda x: x[2], reverse=True)
     dir = f"{question_name}_plag_pairs"
-    clear_directory(dir)
+    shutil.rmtree(dir, ignore_errors=True)
 
     for data_point in data:
         if data_point[2] < 0.5:
@@ -34,18 +28,23 @@ def pair_wise_output(plagiarism_results, question_name):
                         f"{data_point[0].name} - {data_point[1].name}")
          .output(folder_name + f"{data_point[1].name}_{data_point[1].surname}.pdf"))
 
+
 def main():
-    question_name = "Question1"
-    students = load_students("students.json")
+    question_name = "Question3"
+    classroom = ClassroomBuilder("submissions").unzip().build()
 
     # cluster(students, question_name)
-    plagiarism_results = pair_wise(students, question_name)
+    plagiarism_results = (PlagiarismChecker(classroom.students, question_name)
+                          .cast_to_lower()
+                          .drop_piece_of_text("#", "\n")
+                          .drop_piece_of_text('"""', '"""')
+                          .drop_char(" ")
+                          .drop_char("\n")
+                          .check())
     pair_wise_output(plagiarism_results, question_name)
 
-    plagiarism_results = pair_wise_df(students, question_name)
-    plagiarism_results.to_csv(f"{question_name}_plagiarism_results.csv", index=False)
-
-
+    # plagiarism_results = pair_wise_df(classroom, question_name)
+    # plagiarism_results.to_csv(f"{question_name}_plagiarism_results.csv", index=False)
 
 
 def strings_to_pdf(string1, note):
@@ -58,22 +57,6 @@ def strings_to_pdf(string1, note):
 
     return pdf
 
-def clear_directory(directory_path):
-    # Check if the directory exists
-    if os.path.exists(directory_path) and os.path.isdir(directory_path):
-        # Iterate over all the files and directories within the directory
-        for filename in os.listdir(directory_path):
-            file_path = os.path.join(directory_path, filename)
-            try:
-                # If it's a file, delete it
-                if os.path.isfile(file_path) or os.path.islink(file_path):
-                    os.unlink(file_path)
-                # If it's a directory, delete it and all its contents
-                elif os.path.isdir(file_path):
-                    shutil.rmtree(file_path)
-            except Exception as e:
-                print(f'Failed to delete {file_path}. Reason: {e}')
 
 if __name__ == "__main__":
     main()
-

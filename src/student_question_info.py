@@ -13,6 +13,8 @@ class StudentQuestionInfo:
     note: str
 
     def __init__(self, question, code, grade=0, partial_question_info=None, note=""):
+        if partial_question_info is None:
+            partial_question_info = []
         self.question = question if isinstance(question, Question) else Question(**question)
         self.code = code
         self.grade = grade

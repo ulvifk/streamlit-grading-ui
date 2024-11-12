@@ -1,10 +1,13 @@
 import pandas as pd
 
 import src.plag_checker.utils as utils
+from src.classroom import Classroom
 from src.plag_checker.plag_checker import PlagiarismChecker
 
 
-def pair_wise(students, question):
+def pair_wise(classroom: Classroom, question):
+    students = classroom.students
+
     plag_checker = PlagiarismChecker(students, question)
 
     pairs = set()

@@ -1,11 +1,12 @@
 import os
 import pickle
+import re
 
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-from src.student import Student
 import src.plag_checker.utils as utils
+from src.student import Student
 
 
 def cut_string_at_first_occurrence(text, keyword):
@@ -21,20 +22,20 @@ def cut_string_at_first_occurrence(text, keyword):
 
 class PlagiarismChecker:
     students: list[Student]
+
     student_file_mapping: dict[Student, str]
     model: SentenceTransformer
     vectors: np.ndarray
-    s_vectors: list[tuple[Student, list[float]]]
+    s_vectors: list[tuple[Student, any]]
 
     def __init__(self, students: list[Student], question_name: str):
         for student in students:
-            student.get_question_info(question_name).code = utils.transliterate_to_ascii(student.get_question_info(question_name).code)
+            student.get_question_info(question_name).code = utils.transliterate_to_ascii(
+                student.get_question_info(question_name).code)
 
-        student_file_mapping = {student: student.get_question_info(question_name).code.replace(" ", "").replace("\n", "").lower() for student in students}
-
-        self.load_model()
-        self.vectors = self.vectorize(list(student_file_mapping.values()))
-        self.s_vectors = list(zip(student_file_mapping.keys(), self.vectors))
+        self.student_file_mapping = {
+            student: student.get_question_info(question_name).code for
+            student in students}
 
     def load_model(self):
         if not os.path.exists("model.pkl"):
@@ -47,3 +48,52 @@ class PlagiarismChecker:
 
     def vectorize(self, text):
         return self.model.encode(text)
+
+    def drop_char(self, char: str) -> "PlagiarismChecker":
+        for student, text in self.student_file_mapping.items():
+            self.student_file_mapping[student] = text.replace(char, "")
+
+        return self
+
+    def cast_to_lower(self) -> "PlagiarismChecker":
+        for student, text in self.student_file_mapping.items():
+            self.student_file_mapping[student] = text.lower()
+
+        return self
+
+    def drop_piece_of_text(self, start, end) -> "PlagiarismChecker":
+        def drop(text, start_text, end_text):
+            pattern = re.escape("#") + ".*?" + re.escape("\n")
+            return re.sub(pattern, '', text, flags=re.DOTALL)
+
+        for student, text in self.student_file_mapping.items():
+            self.student_file_mapping[student] = drop(text, start, end)
+
+        return self
+
+    def check(self):
+        self.load_model()
+        self.vectors = self.vectorize(list(self.student_file_mapping.values()))
+        self.s_vectors = []
+        for student, text in self.student_file_mapping.items():
+            if text == "":
+                print(f"Skipping {student.name} {student.surname} as the text is empty.")
+                continue
+            self.s_vectors.append((student, self.vectorize(text)))
+
+        pairs = set()
+        plagiarism_results = set()
+        for student_a, text_vector_a in self.s_vectors:
+            new_vectors = self.s_vectors.copy()
+            current_index = new_vectors.index((student_a, text_vector_a))
+            del new_vectors[current_index]
+            for student_b, text_vector_b in new_vectors:
+                sim_score = utils.similarity(text_vector_a, text_vector_b).numpy()[0][0]
+                student_pair = sorted((student_a, student_b), key=lambda x: f"{x.name} {x.surname}")
+                if tuple(student_pair) in pairs:
+                    continue
+
+                score = (student_pair[0], student_pair[1], sim_score)
+                pairs.add(tuple(student_pair))
+                plagiarism_results.add(score)
+        return plagiarism_results

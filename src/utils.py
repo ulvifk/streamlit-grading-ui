@@ -129,18 +129,6 @@ def save_students(students):
         json.dump([student.__dict__() for student in students], f, indent=2)
 
 
-def unzip_all_in_directory(directory):
-    for root, dirs, files in os.walk(directory):
-        for file in files:
-            try:
-                if file.endswith(".zip"):
-                    zip_path = os.path.join(root, file)
-                    print(f"Unzipping: {zip_path}")
-                    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-                        zip_ref.extractall(root)
-            except:
-                pass
-
 
 if __name__ == "__main__":
     # unzip_all_in_directory("./submissions")

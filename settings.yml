@@ -1,21 +1,31 @@
 ---
 Questions:
-  - question: "Question1"
-    keys: [ "q1", "q01", "_1" ]
+  - question: "Question1a"
+    keys: [ "q1a", "q01a", "_1a", "q1_a", "q01_a", "qo1a", "qo1_a" ]
+    grade: 25
+    partial_questions:
+
+  - question: "Question1b"
+    keys: [ "q1b", "q01b", "_1b", "q1_b", "q01_b", "qo1b", "qo1_b" ]
+    grade: 25
+    partial_questions:
+
+  - question: "Question1c"
+    keys: [ "q1c", "q01c", "_1c", "q1_c", "q01_c", "qo1c", "qo1_c" ]
     grade: 25
     partial_questions:
 
   - question: "Question2"
-    keys: [ "q2", "q02", "_2" ]
+    keys: [ "q2", "q02", "_2", "qo2" ]
     grade: 25
     partial_questions:
 
   - question: "Question3"
-    keys: ["q3", "q03", "_3"]
+    keys: ["q3", "q03", "_3", "qo3"]
     grade: 25
     partial_questions:
 
   - question: "Question4"
-    keys: [ "q4", "q04", "_4" ]
+    keys: [ "q4", "q04", "_4", "qo4" ]
     grade: 25
     partial_questions:

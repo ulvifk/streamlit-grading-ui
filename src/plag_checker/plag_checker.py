@@ -28,14 +28,19 @@ class PlagiarismChecker:
     vectors: np.ndarray
     s_vectors: list[tuple[Student, any]]
 
-    def __init__(self, students: list[Student], question_name: str):
+    def __init__(self, students: list[Student], *question_names: str):
         for student in students:
-            student.get_question_info(question_name).code = utils.transliterate_to_ascii(
-                student.get_question_info(question_name).code)
+            for question_name in question_names:
+                student.get_question_info(question_name).code = utils.transliterate_to_ascii(
+                    student.get_question_info(question_name).code)
 
         self.student_file_mapping = {
-            student: student.get_question_info(question_name).code for
+            student: self._merge_texts(
+                [student.get_question_info(question_name).code for question_name in question_names]) for
             student in students}
+
+    def _merge_texts(self, texts):
+        return " ".join(texts)
 
     def load_model(self):
         if not os.path.exists("model.pkl"):

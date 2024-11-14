@@ -45,7 +45,7 @@ class ClassroomBuilder:
                 surname = path.split("/")[-1].split("_")[0].split(" ")[1]
                 return name, surname
             except Exception as e:
-                print(f"Failed to get name and surname from path {path}.")
+                # print(f"Failed to get name and surname from path {path}.")
                 name = path.split("/")[-1]
                 return name, ""
 
